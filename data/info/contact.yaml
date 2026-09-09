@@ -7,6 +7,10 @@ address:
       lines:
         - "Prof. Jisoo Mok"
         - "#1001 구자겸기계관 · Gujagyeom Mechanical Engineering Bldg. Room 1001"
+    - title: Lab
+      lines:
+        - "LaMI Lab"
+        - "구자겸기계관 5층 · Gujagyeom Mechanical Engineering Bldg. 5F"
   footer:
     - "Department of Electronic Engineering"
     - "Hanyang University"

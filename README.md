@@ -112,7 +112,7 @@ lami-labs.github.io/
 │   ├── news/_index.md             #   News
 │   ├── publications/_index.md     #   Publications
 │   ├── gallery/_index.md          #   Gallery
-│   ├── contact/_index.md          #   Contact (주소, 이메일, Office Hours, 장비)
+│   ├── contact/_index.md          #   Contact (주소, 이메일, Office Hours)
 │   ├── research/_index.md         #   Research (메뉴에는 없음, /research/ 직접 접속)
 │   ├── project/_index.md          #   Project (메뉴에는 없음)
 │   ├── application/_index.md      #   Join Us (메뉴에는 없음, 지원 폼으로 대체)
@@ -127,7 +127,7 @@ lami-labs.github.io/
 │   ├── news/news.yaml
 │   ├── gallery/albums.yaml
 │   ├── info/contact.yaml          #   Contact 페이지 주소/이메일/Office Hours
-│   ├── info/resources.yaml        #   Contact 페이지 하단 장비 카드
+│   ├── info/resources.yaml        #   (장비 카드 데이터, 현재 미사용)
 │   ├── info/contact_info.yaml     #   (구 연락처 카드 데이터, 현재 미사용)
 │   └── application/notice.yaml    #   Join Us 페이지 안내문
 │
@@ -148,7 +148,7 @@ lami-labs.github.io/
 │   │   ├── project-cards.html     #     과제 목록
 │   │   ├── news-cards.html        #     뉴스 카드 (홈/뉴스 페이지 공용)
 │   │   ├── gallery-albums.html    #     갤러리 앨범 + 라이트박스
-│   │   ├── resource-cards.html    #     장비/서버 카드
+│   │   ├── resource-cards.html    #     장비/서버 카드 (현재 미사용)
 │   │   ├── contact-panel.html     #     연락처 2단 패널 (주소 / 이메일·Office Hours 카드)
 │   │   ├── contact-info-cards.html #    (구 연락처 카드, 현재 미사용)
 │   │   └── application-notice.html #    지원 안내
@@ -197,7 +197,7 @@ lami-labs.github.io/
 | News | `/news/` | `content/news/_index.md` | `data/news/news.yaml` | `static/media/news/` |
 | Publications | `/publications/` | `content/publications/_index.md` | `data/publications/publications.yaml` | 없음 (아이콘만) |
 | Gallery | `/gallery/` | `content/gallery/_index.md` | `data/gallery/albums.yaml` | `static/media/gallery/<folder>/` |
-| Contact | `/contact/` | `content/contact/_index.md` | `data/info/contact.yaml`, `data/info/resources.yaml` | `static/media/resource/` |
+| Contact | `/contact/` | `content/contact/_index.md` | `data/info/contact.yaml` | 없음 |
 | Research (메뉴 없음) | `/research/` | `content/research/_index.md` | `data/research/*.yaml` | `static/media/research/` |
 | Project (메뉴 없음) | `/project/` | `content/project/_index.md` | `data/project/projects.yaml` | 없음 |
 | Join Us (메뉴 없음) | `/application/` | `content/application/_index.md` | `data/application/notice.yaml` | 없음 |
@@ -219,7 +219,7 @@ lami-labs.github.io/
 
 ### Contact (`content/contact/_index.md`)
 
-- 2단 연락처 패널과 하단 Resources 두 블록으로 구성됩니다.
+- 2단 연락처 패널 한 블록으로 구성됩니다. (장비 카드 `resource-cards`는 제거했습니다. 다시 넣으려면 `data/info/resources.yaml`과 shortcode가 남아 있습니다.)
 - 연락처 패널의 텍스트는 전부 `data/info/contact.yaml`에서 읽습니다 (6.7 참고). 페이지 파일은 건드릴 필요가 없습니다.
 - 지도는 넣지 않았습니다. 주소 텍스트만 표시합니다.
 - 데이터 파일은 페이지 이름과 달리 `data/info/`에 있습니다 (shortcode가 `site.Data.info`를 읽음).
@@ -402,7 +402,7 @@ order: 1                    # 정렬 순서
   location: "Seoul"
 ```
 
-### 6.7 Contact — `data/info/contact.yaml`, `data/info/resources.yaml`
+### 6.7 Contact — `data/info/contact.yaml`
 
 `contact.yaml` (연락처 패널):
 
@@ -429,7 +429,7 @@ cards:                       # 오른쪽 카드. 순서대로 표시
       - "**Mon** 09:00–12:00 | 13:00–18:00"
 ```
 
-`resources.yaml` (장비 카드): `sections` 형식(텍스트 목록) 또는 `robots` 형식(사진 그리드) 둘 중 하나.
+`resources.yaml` (장비 카드, 현재 미사용): `sections` 형식(텍스트 목록) 또는 `robots` 형식(사진 그리드) 둘 중 하나.
 
 ```yaml
 - title: "Server"
