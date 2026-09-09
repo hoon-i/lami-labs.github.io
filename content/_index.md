@@ -60,12 +60,13 @@ sections:
       title: ""
       text: |
         <style>
+          #intro .max-w-prose, #intro .prose { max-width: 1100px !important; width: 100% !important; }
           .lab-intro-text { color: #374151; }
           .dark .lab-intro-text { color: #e2e8f0; }
           .lab-intro-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
           .dark .lab-intro-link { color: #60a5fa; }
         </style>
-        <div style="max-width: 1200px; margin: 0 auto;">
+        <div style="max-width: 1100px; margin: 0 auto;">
           <p class="lab-intro-text" style="font-size: 1.1rem; line-height: 1.85; margin: 0 0 0.6rem;">
             Welcome to the <strong>Language-driven Multimodal Intelligence Lab (LaMI Lab)</strong> at <strong>Hanyang University</strong>, led by <strong>Prof. Jisoo Mok</strong>.
             Our research group is committed to building AI agents that are practical and trustworthy.
@@ -84,7 +85,8 @@ sections:
       title: ""
       text: |
         <style>
-          .ra-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+          #research-areas .max-w-prose, #research-areas .prose { max-width: 1100px !important; width: 100% !important; }
+          .ra-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; max-width: 1100px; margin: 0 auto; }
           @media (min-width: 860px) { .ra-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
           .ra-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 1rem; padding: 1.75rem 1.6rem; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05); }
           .dark .ra-card { background: #1e293b; border-color: #334155; }
