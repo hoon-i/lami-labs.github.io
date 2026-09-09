@@ -7,11 +7,7 @@ name:
   display: Sanghoon Yoo
   given: Sanghoon
   family: Yoo
-role: |-
-  M.S. Student (Myongji University)
-tags:
-  - LLM
-links:
-  - icon: at-symbol
-    url: mailto:shyoo@dgist.ac.kr
-    label: E-mail
+role: |-                      # 한 줄씩 카드에 표시됩니다 (HTML 사용 가능)
+  🎓 Myongji University
+  🔬 LLM
+  ✉️ <a href="mailto:shyoo@dgist.ac.kr">shyoo@dgist.ac.kr</a>

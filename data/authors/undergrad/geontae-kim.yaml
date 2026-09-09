@@ -7,11 +7,7 @@ name:
   display: Geontae Kim
   given: Geontae
   family: Kim
-role: |-
-  Undergraduate Intern (Dongguk University)
-tags:
-  - Multimodal Modeling
-links:
-  - icon: at-symbol
-    url: mailto:goeric342@dgu.ac.kr
-    label: E-mail
+role: |-                      # 한 줄씩 카드에 표시됩니다 (HTML 사용 가능)
+  🎓 Dongguk University
+  🔬 Multimodal Modeling
+  ✉️ <a href="mailto:goeric342@dgu.ac.kr">goeric342@dgu.ac.kr</a>

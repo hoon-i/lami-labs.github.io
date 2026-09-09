@@ -7,11 +7,7 @@ name:
   display: Tae Yeong Jeong
   given: Tae Yeong
   family: Jeong
-role: |-
-  Undergraduate Intern (DGIST)
-tags:
-  - Multimodal Modeling
-links:
-  - icon: at-symbol
-    url: mailto:jty@dgist.ac.kr
-    label: E-mail
+role: |-                      # 한 줄씩 카드에 표시됩니다 (HTML 사용 가능)
+  🎓 DGIST
+  🔬 Multimodal Modeling
+  ✉️ <a href="mailto:jty@dgist.ac.kr">jty@dgist.ac.kr</a>
