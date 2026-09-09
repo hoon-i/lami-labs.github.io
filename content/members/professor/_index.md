@@ -24,21 +24,21 @@ sections:
 
           .pi-name { font-size: 2rem; font-weight: 800; margin: 0 0 0.25rem; color: #111827; line-height: 1.2; }
           .dark .pi-name { color: #f8fafc; }
-          .pi-role { margin: 0 0 1.25rem; color: #1d4ed8; font-weight: 600; font-size: 1rem; }
-          .dark .pi-role { color: #93c5fd; }
+          .pi-role { margin: 0 0 1.25rem; color: #111827; font-weight: 600; font-size: 1rem; }
+          .dark .pi-role { color: #e5e7eb; }
           .pi-intro p { margin: 0 0 0.9rem; color: #374151; line-height: 1.8; font-size: 1rem; }
           .dark .pi-intro p { color: #e2e8f0; }
-          .pi-intro a { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+          .pi-intro a { color: #111827; font-weight: 600; text-decoration: none; }
           .pi-intro a:hover { text-decoration: underline; }
-          .dark .pi-intro a { color: #60a5fa; }
+          .dark .pi-intro a { color: #d1d5db; }
           .pi-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
           .pi-links a { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.9rem; border-radius: 999px; border: 1px solid #d1d5db; font-size: 0.9rem; font-weight: 600; color: #374151; text-decoration: none; }
-          .pi-links a:hover { border-color: #3b82f6; color: #1d4ed8; }
+          .pi-links a:hover { border-color: #111827; color: #111827; }
           .dark .pi-links a { border-color: #475569; color: #e2e8f0; }
 
           .pi-sections { display: grid; grid-template-columns: 1fr; gap: 1.5rem 3rem; margin-top: 3rem; }
           @media (min-width: 820px) { .pi-sections { grid-template-columns: 1fr 1fr; } }
-          .pi-section h3 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 2px solid #3b82f6; color: #111827; }
+          .pi-section h3 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 2px solid #111827; color: #111827; }
           .dark .pi-section h3 { color: #f1f5f9; }
           .pi-section ul { list-style: none; margin: 0; padding: 0; }
           .pi-section li { padding: 0.35rem 0; color: #374151; line-height: 1.6; font-size: 0.97rem; }

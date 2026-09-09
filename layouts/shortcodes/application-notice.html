@@ -30,7 +30,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #2563eb;
+    background: #000000;
     color: #fff !important;
     font-size: 0.9rem;
     font-weight: 600;
@@ -39,11 +39,11 @@
     text-decoration: none !important;
     transition: background 0.15s;
   }
-  .cn-btn-primary:hover { background: #1d4ed8; }
+  .cn-btn-primary:hover { background: #111827; }
 
   .cn-divider {
     border: none;
-    border-top: 2px solid #3b82f6;
+    border-top: 2px solid #111827;
     margin-bottom: 2rem;
   }
 
@@ -72,10 +72,10 @@
   .cn-track-title {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #1e3a8a;
+    color: #111827;
     margin: 0;
   }
-  .dark .cn-track-title { color: #93c5fd; }
+  .dark .cn-track-title { color: #e5e7eb; }
 
   .cn-track-badge {
     display: inline-block;
@@ -83,15 +83,15 @@
     font-weight: 600;
     padding: 0.18rem 0.6rem;
     border-radius: 999px;
-    background: #dbeafe;
-    color: #1e40af;
-    border: 1px solid #bfdbfe;
+    background: #f3f4f6;
+    color: #1f2937;
+    border: 1px solid #e5e7eb;
     white-space: nowrap;
   }
   .dark .cn-track-badge {
-    background: #1e3a8a;
-    color: #bfdbfe;
-    border-color: #1e40af;
+    background: #111827;
+    color: #e5e7eb;
+    border-color: #1f2937;
   }
 
   .cn-track-content {
@@ -126,7 +126,7 @@
       <a
         href="{{ .url | safeURL }}"
         {{ if $newTab }}target="_blank" rel="noopener noreferrer"{{ end }}
-        class="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold no-underline {{ if $isSecondary }}text-blue-600 bg-white border border-blue-600 hover:bg-blue-50{{ else }}text-white bg-blue-600 hover:bg-blue-700{{ end }}"
+        class="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold no-underline {{ if $isSecondary }}text-gray-900 bg-white border border-gray-900 hover:bg-gray-100{{ else }}text-white bg-gray-900 hover:bg-black{{ end }}"
       >
         {{ .label }}
       </a>

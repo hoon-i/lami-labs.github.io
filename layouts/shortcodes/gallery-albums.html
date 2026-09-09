@@ -53,14 +53,14 @@
 
   .gallery-filter-btn:hover {
     border-color: rgb(59 130 246 / 0.7);
-    color: #1d4ed8;
+    color: #111827;
     transform: translateY(-1px);
   }
 
   .gallery-filter-btn.is-active {
-    color: #1d4ed8;
-    background: #dbeafe;
-    border-color: #3b82f6;
+    color: #111827;
+    background: #f3f4f6;
+    border-color: #111827;
   }
 
   .dark .gallery-filter-btn {
@@ -71,11 +71,11 @@
 
   .dark .gallery-filter-btn:hover {
     border-color: rgb(96 165 250 / 0.75);
-    color: #bfdbfe;
+    color: #e5e7eb;
   }
 
   .dark .gallery-filter-btn.is-active {
-    color: #bfdbfe;
+    color: #e5e7eb;
     background: rgb(30 58 138 / 0.45);
     border-color: rgb(96 165 250 / 0.8);
   }
@@ -166,7 +166,7 @@
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.01em;
-    color: #bfdbfe;
+    color: #e5e7eb;
     text-shadow: 0 1px 3px rgba(2, 6, 23, 0.45);
   }
 
@@ -180,20 +180,20 @@
   }
 
   /* Force the exact same badge palette used in Members cards */
-  .gallery-card-badges .bg-blue-100 {
+  .gallery-card-badges .bg-gray-100 {
     background-color: rgb(186 230 253 / 0.52) !important;
   }
 
-  .gallery-card-badges .text-blue-800 {
+  .gallery-card-badges .text-gray-800 {
     color: rgb(30 64 175) !important;
     font-weight: 700 !important;
   }
 
-  .dark .gallery-card-badges .dark\:bg-blue-900\/40 {
+  .dark .gallery-card-badges .dark\:bg-gray-700 {
     background-color: rgb(30 58 138 / 0.4) !important;
   }
 
-  .dark .gallery-card-badges .dark\:text-blue-200 {
+  .dark .gallery-card-badges .dark\:text-gray-200 {
     color: rgb(191 219 254) !important;
   }
 
@@ -216,9 +216,9 @@
   }
 
   .gallery-load-more-btn {
-    border: 1px solid #93c5fd;
+    border: 1px solid #e5e7eb;
     background: #ffffff;
-    color: #1d4ed8;
+    color: #111827;
     border-radius: 0.35rem;
     padding: 0.78rem 1.35rem;
     font-size: 0.98rem;
@@ -229,14 +229,14 @@
   }
 
   .gallery-load-more-btn:hover {
-    background: #eff6ff;
-    border-color: #60a5fa;
+    background: #f9fafb;
+    border-color: #d1d5db;
   }
 
   .dark .gallery-load-more-btn {
     background: #111827;
-    color: #93c5fd;
-    border-color: #3b82f6;
+    color: #e5e7eb;
+    border-color: #111827;
   }
 
   .dark .gallery-load-more-btn:hover {
@@ -287,7 +287,7 @@
     font-size: 1.04rem;
     font-weight: 800;
     line-height: 1.28;
-    color: #1d4ed8;
+    color: #111827;
   }
 
   .gallery-viewer-title {
@@ -379,7 +379,7 @@
   }
 
   .dark .gallery-viewer-category {
-    color: #60a5fa;
+    color: #d1d5db;
   }
 
   .dark .gallery-viewer-title {
@@ -402,8 +402,8 @@
 
   .dark .gallery-viewer-photo-page {
     background: rgba(30, 58, 138, 0.38);
-    border-color: rgba(96, 165, 250, 0.72);
-    color: #bfdbfe;
+    border-color: rgba(229, 231, 235, 0.72);
+    color: #e5e7eb;
   }
 
   @media (max-width: 640px) {
@@ -509,10 +509,10 @@
           {{ if or $date $location }}
             <div class="gallery-card-badges">
               {{ if $date }}
-                <span class="inline-block px-1.5 py-0.5 text-[11px] rounded bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-200">{{ $date }}</span>
+                <span class="inline-block px-1.5 py-0.5 text-[11px] rounded bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200">{{ $date }}</span>
               {{ end }}
               {{ if $location }}
-                <span class="inline-block px-1.5 py-0.5 text-[11px] rounded bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-200">{{ $location }}</span>
+                <span class="inline-block px-1.5 py-0.5 text-[11px] rounded bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200">{{ $location }}</span>
               {{ end }}
             </div>
           {{ end }}
