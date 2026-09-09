@@ -267,10 +267,10 @@
     {{ if and (ne $year "") (ne $year $prevYear) }}
       {{ if ne $prevYear "" }}
         <!-- Year divider -->
-        <div class="col-span-1 mt-1 mb-1 year-divider" style="border-bottom: 2px solid #3b82f6;"></div>
+        <div class="col-span-1 mt-1 mb-1 year-divider" data-year="{{ $year }}" style="border-bottom: 2px solid #3b82f6;"></div>
       {{ end }}
       <!-- Year header -->
-      <div class="col-span-1 mt-1 year-header">
+      <div class="col-span-1 mt-1 year-header" data-year="{{ $year }}">
         <h2 class="font-semibold text-gray-800 dark:text-gray-200 mb-1" style="font-size: 21px;">{{ $year }}</h2>
       </div>
     {{ end }}
@@ -361,6 +361,7 @@
   </div>
 </div>
 
+<p id="publications-empty" class="text-center text-sm text-gray-500 dark:text-gray-400 py-8" style="display:none;">No publications match this filter.</p>
 <script>
 (function() {
   const searchInput = document.getElementById('publication-search');
@@ -442,6 +443,28 @@
         observer.unobserve(card);
       }
     });
+
+    // Hide year headers/dividers that have no visible cards
+    const visibleYears = new Set();
+    publicationCards.forEach(card => {
+      if (!card.classList.contains('hidden')) visibleYears.add(card.getAttribute('data-year') || '');
+    });
+    let firstVisibleSeen = false;
+    document.querySelectorAll('.year-header, .year-divider').forEach(el => {
+      const y = el.getAttribute('data-year') || '';
+      const show = visibleYears.has(y);
+      if (el.classList.contains('year-divider')) {
+        // no divider above the first visible year
+        el.classList.toggle('hidden', !show || !firstVisibleSeen);
+        el.style.display = (!show || !firstVisibleSeen) ? 'none' : '';
+      } else {
+        el.classList.toggle('hidden', !show);
+        el.style.display = show ? '' : 'none';
+        if (show) firstVisibleSeen = true;
+      }
+    });
+    const emptyMsg = document.getElementById('publications-empty');
+    if (emptyMsg) emptyMsg.style.display = visibleYears.size === 0 ? '' : 'none';
   }
   
   // Search input handler
