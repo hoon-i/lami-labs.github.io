@@ -141,44 +141,13 @@
     white-space: nowrap;
   }
 
-  /* Publication category badges: one step darker than before, still lighter than News badges */
-  .publication-category-conference {
-    background-color: #8b9097;
-    color: #ffffff;
-    border: 1px solid #8b9097;
-  }
-
-  .publication-category-journal {
-    background-color: #d9dadc;
-    color: #1f2125;
-    border: 1px solid #d9dadc;
-  }
-
-  .publication-category-domestic {
-    background-color: #ffffff;
-    color: #3b3f45;
-    border: 1px solid #8b9097;
-  }
-
-  .publication-category-patent {
-    background-color: #3b3f45;
-    color: #ffffff;
-    border: 1px solid #3b3f45;
-  }
-
-  .publication-category-preprint {
-    background-color: #ffffff;
-    color: #8b9097;
-    border: 1px dashed #8b9097;
-  }
-
-  /* Dark mode: white text on every badge, backgrounds still differ per type */
-  .dark .publication-category-badge { color: #ffffff !important; }
-  .dark .publication-category-conference { background-color: #8b9097 !important; border-color: #8b9097 !important; }
-  .dark .publication-category-journal { background-color: #3b3f45 !important; border-color: #8b9097 !important; }
-  .dark .publication-category-domestic { background-color: transparent !important; border-color: #8b9097 !important; }
-  .dark .publication-category-patent { background-color: #1f2125 !important; border-color: #d9dadc !important; }
-  .dark .publication-category-preprint { background-color: transparent !important; border: 1px dashed #8b9097 !important; }
+  /* Publication category badges: fixed colors in both light and dark mode, white text */
+  .publication-category-badge { color: #ffffff !important; }
+  .publication-category-conference { background-color: #8b9097 !important; border: 1px solid #8b9097 !important; }
+  .publication-category-journal { background-color: #d9dadc !important; border: 1px solid #d9dadc !important; }
+  .publication-category-domestic { background-color: #3b3f45 !important; border: 1px solid #3b3f45 !important; }
+  .publication-category-patent { background-color: #1f2125 !important; border: 1px solid #1f2125 !important; }
+  .publication-category-preprint { background-color: #8b9097 !important; border: 1px dashed #ffffff !important; }
 
   .publication-title {
     padding-right: 7.2rem;
