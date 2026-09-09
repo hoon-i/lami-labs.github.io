@@ -137,15 +137,15 @@
     white-space: nowrap;
   }
 
-  /* Publication category badges: light fills so they read differently from the darker News badges */
+  /* Publication category badges: one step darker than before, still lighter than News badges */
   .publication-category-conference {
-    background-color: #d9dadc;
-    color: #1f2125;
-    border: 1px solid #d9dadc;
+    background-color: #8b9097;
+    color: #ffffff;
+    border: 1px solid #8b9097;
   }
 
   .publication-category-journal {
-    background-color: #f3f4f5;
+    background-color: #d9dadc;
     color: #1f2125;
     border: 1px solid #d9dadc;
   }
@@ -153,26 +153,27 @@
   .publication-category-domestic {
     background-color: #ffffff;
     color: #3b3f45;
-    border: 1px solid #d9dadc;
+    border: 1px solid #8b9097;
   }
 
   .publication-category-patent {
-    background-color: #eceeef;
-    color: #3b3f45;
-    border: 1px solid #d9dadc;
+    background-color: #3b3f45;
+    color: #ffffff;
+    border: 1px solid #3b3f45;
   }
 
   .publication-category-preprint {
     background-color: #ffffff;
     color: #8b9097;
-    border: 1px dashed #d9dadc;
+    border: 1px dashed #8b9097;
   }
 
-  .dark .publication-category-badge {
-    background-color: #3b3f45 !important;
-    color: #d9dadc !important;
-    border-color: #8b9097 !important;
-  }
+  /* Dark mode: keep the types distinguishable on #1f2125 */
+  .dark .publication-category-conference { background-color: #8b9097 !important; color: #1f2125 !important; border-color: #8b9097 !important; }
+  .dark .publication-category-journal { background-color: #3b3f45 !important; color: #d9dadc !important; border-color: #8b9097 !important; }
+  .dark .publication-category-domestic { background-color: transparent !important; color: #d9dadc !important; border-color: #8b9097 !important; }
+  .dark .publication-category-patent { background-color: #d9dadc !important; color: #1f2125 !important; border-color: #d9dadc !important; }
+  .dark .publication-category-preprint { background-color: transparent !important; color: #8b9097 !important; border: 1px dashed #8b9097 !important; }
 
   .publication-title {
     padding-right: 7.2rem;
