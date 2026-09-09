@@ -108,7 +108,8 @@ lami-labs.github.io/
 │   ├── _index.md                  #   홈
 │   ├── members/_index.md          #   Members (전체 목록, 메뉴에는 없음)
 │   ├── members/professor/_index.md #  Members > Professor (교수 카드 + 소개/학력/경력, 포닥)
-│   ├── members/students/_index.md #   Members > Students (박사, 석박통합, 석사, 인턴, 졸업생)
+│   ├── members/students/_index.md #   Members > Students (박사, 석박통합, 석사, 인턴)
+│   ├── members/alumni/_index.md   #   Members > Alumni (졸업생)
 │   ├── news/_index.md             #   News
 │   ├── publications/_index.md     #   Publications
 │   ├── gallery/_index.md          #   Gallery
@@ -193,7 +194,8 @@ lami-labs.github.io/
 |---|---|---|---|---|
 | Home | `/` | `content/_index.md` | `data/news/news.yaml` | `assets/media/home.png` (배경) |
 | Members > Professor | `/members/professor/` | `content/members/professor/_index.md` | `data/authors/**/*.yaml` (PI, Postdoc) | `static/media/authors/<카테고리>/` |
-| Members > Students | `/members/students/` | `content/members/students/_index.md` | `data/authors/**/*.yaml` (PhD, Integrated, Master, Interns, Alumni) | `static/media/authors/<카테고리>/` |
+| Members > Students | `/members/students/` | `content/members/students/_index.md` | `data/authors/**/*.yaml` (PhD, Integrated, Master, Interns) |
+| Members > Alumni | `/members/alumni/` | `content/members/alumni/_index.md` | `data/authors/Alumni/*.yaml` | 없음 | `static/media/authors/<카테고리>/` |
 | Members (전체) | `/members/` | `content/members/_index.md` | 위 전체 | 메뉴에 노출되지 않음 |
 | News | `/news/` | `content/news/_index.md` | `data/news/news.yaml` | `static/media/news/` |
 | Publications | `/publications/` | `content/publications/_index.md` | `data/publications/publications.yaml` | 없음 (아이콘만) |
@@ -250,7 +252,7 @@ lami-labs.github.io/
 | `Integrated Students` | Students 페이지 / Integrated M.S./Ph.D. Students | `integrated/` |
 | `Master Students` | Students 페이지 / M.S. Students | `master/` |
 | `Interns` | Students 페이지 / Interns | `undergrad/` |
-| `Alumni` | Students 페이지 / Alumni | (사진 없음) |
+| `Alumni` | Alumni 페이지 | (사진 없음) |
 
 > Alumni는 예외적으로 **폴더 이름이 `Alumni`인 것**을 기준으로 수집합니다. 반드시 `data/authors/Alumni/` 안에 두세요.
 > `docs/examples/`의 예시 파일에는 `Post Doc`, `Undergraduate Students` 같은 값이 적혀 있는데, 실제 shortcode는 위 표의 값만 인식합니다.
@@ -508,9 +510,9 @@ tracks:
 
 상단 메뉴 목록. `weight`가 작을수록 왼쪽. 새 페이지를 만들면 여기에도 추가해야 메뉴에 보입니다.
 
-현재 메뉴는 Home, Members(Professor / Students), News, Publications, Gallery, Contact 6개입니다. Research, Project, Join Us, Calendar 페이지는 존재하지만 메뉴에는 노출하지 않습니다.
+현재 메뉴는 Home, Members(Professor / Students / Alumni), News, Publications, Gallery, Contact 6개입니다. Research, Project, Join Us, Calendar 페이지는 존재하지만 메뉴에는 노출하지 않습니다.
 
-드롭다운 메뉴는 부모 항목에 `hasChildren: true`를 주고, 자식 항목에 `parent: <부모 name>`을 지정합니다. Members 메뉴가 이 방식으로 Professor / Students 두 개의 하위 메뉴를 가집니다.
+드롭다운 메뉴는 부모 항목에 `hasChildren: true`를 주고, 자식 항목에 `parent: <부모 name>`을 지정합니다. Members 메뉴가 이 방식으로 Professor / Students / Alumni 세 개의 하위 메뉴를 가집니다.
 
 ### `assets/css/custom.css`
 
@@ -565,6 +567,7 @@ tracks:
 - **로고, 파비콘, 홈 배경이 템플릿 기본 이미지입니다.** `assets/media/logo.png`(파란 네모), `static/favicon.png`, `assets/media/home.png`(남색 단색)을 연구실 이미지로 교체해야 합니다.
 - **교수 YAML의 Google Scholar 링크와 논문별 원문/코드 링크가 비어 있습니다.**
 - **멤버 `category` 값은 shortcode 필터와 정확히 일치해야 합니다.** 6.1의 표를 따르세요.
+- 멤버가 없는 섹션은 숨기지 않고 "Coming soon." 문구를 표시합니다. 문구는 각 `members-*.html`의 `members-empty` 요소에서 바꿀 수 있습니다.
 - `data/research/`가 비어 있습니다. Research 페이지(메뉴 미노출)는 YAML을 넣기 전까지 빈 상태입니다.
 - `layouts/shortcodes/members-cards.html`, `home-research-topic.html`, `contact-info-cards.html`은 현재 어떤 페이지에서도 호출하지 않는 예비 컴포넌트입니다.
 - `blog/` 폴더는 Hugo Blox 템플릿 잔여물이며 `hugo.yaml`에서 렌더링을 꺼두었습니다. 삭제해도 무방합니다.

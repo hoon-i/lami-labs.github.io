@@ -96,12 +96,7 @@
     {{ end }}
   {{ end }}
   {{ if eq (len $filtered) 0 }}
-      <script>
-      (function() {
-        const section = document.getElementById("interns");
-        if (section) section.style.display = "none";
-      })();
-      </script>
+      <p class="members-empty col-span-full text-center text-sm text-gray-500 dark:text-gray-400 py-6">Coming soon.</p>
   {{ else }}
   {{ range sort $filtered "order" }}
       <div class="people-card bg-white dark:bg-gray-800 rounded-lg shadow-md px-6 pt-0 pb-6">

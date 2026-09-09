@@ -17,6 +17,10 @@ main:
     name: Students
     url: /members/students/
     weight: 2
+  - parent: Members
+    name: Alumni
+    url: /members/alumni/
+    weight: 3
   - name: News
     url: /news/
     weight: 30
