@@ -282,10 +282,7 @@ html:not(.dark) .ra-card {
   background-color: #1f2125 !important;
 }
 
-.dark #publications .publication-card,
-.dark #project .project-card {
-  background-color: #1f2125 !important;
-}
+/* Publication/project cards use the same dark card color as News cards (see .dark .bg-white.dark\:bg-gray-800 below) */
 
 .dark .dark\:bg-gray-800,
 .dark .bg-white.dark\:bg-gray-800 {
