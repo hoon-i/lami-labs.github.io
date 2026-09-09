@@ -137,31 +137,41 @@
     white-space: nowrap;
   }
 
+  /* Publication category badges: light fills so they read differently from the darker News badges */
   .publication-category-conference {
-    background-color: #1f2125;
-    color: #ffffff;
-  }
-
-  .publication-category-journal {
-    background-color: #38bdf8;
-    color: #ffffff;
-  }
-
-  .publication-category-domestic {
     background-color: #d9dadc;
     color: #1f2125;
     border: 1px solid #d9dadc;
   }
 
+  .publication-category-journal {
+    background-color: #f3f4f5;
+    color: #1f2125;
+    border: 1px solid #d9dadc;
+  }
+
+  .publication-category-domestic {
+    background-color: #ffffff;
+    color: #3b3f45;
+    border: 1px solid #d9dadc;
+  }
+
   .publication-category-patent {
-    background-color: #3b3f45;
-    color: #ffffff;
+    background-color: #eceeef;
+    color: #3b3f45;
+    border: 1px solid #d9dadc;
   }
 
   .publication-category-preprint {
-    background-color: #e7f0ff;
-    color: #3b3f45;
-    border: 1px solid #d9dadc;
+    background-color: #ffffff;
+    color: #8b9097;
+    border: 1px dashed #d9dadc;
+  }
+
+  .dark .publication-category-badge {
+    background-color: #3b3f45 !important;
+    color: #d9dadc !important;
+    border-color: #8b9097 !important;
   }
 
   .publication-title {

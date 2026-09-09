@@ -251,6 +251,14 @@ html:not(.dark) footer {
   background-color: var(--header-bg) !important;
 }
 
+/* Dark mode header/footer: same family as the dark page (#1f2125) but one step lighter for separation */
+.dark #site-header,
+.dark #site-header .navbar,
+.dark footer {
+  background-color: #2a2d33 !important;
+  border-bottom-color: #3b3f45 !important;
+}
+
 /* Make key content cards blend with page background */
 html:not(.dark) #publications .publication-card,
 html:not(.dark) #project .project-card {
