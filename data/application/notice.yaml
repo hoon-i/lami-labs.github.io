@@ -1,13 +1,16 @@
 intro: |
   LaMI Lab is looking for curious, passionate, and highly motivated students (M.S./Ph.D.),
   as well as undergraduate interns to join our research group.
-  Please submit the form below to apply.
+  Please submit the application form below. We will get back to you after reviewing your application.
 
 buttons:
-  - label: "Apply 🚀"
+  - label: "Application Form"
     url: "https://forms.gle/AUYdPRmsnc34Cevx7"
     variant: "primary"
     new_tab: true
+  - label: "Contact"
+    url: "/contact/"
+    variant: "secondary"
 
 tracks:
   - title: "Undergraduate Intern"
@@ -18,4 +21,4 @@ tracks:
   - title: "Graduate Students (M.S. / Ph.D.)"
     badge: "Now recruiting"
     content: |
-      We are recruiting M.S. and Ph.D. students in the Department of Electronic Engineering, Hanyang University.
+      We are recruiting M.S., Ph.D., and integrated M.S./Ph.D. students in the Department of Electronic Engineering, Hanyang University.

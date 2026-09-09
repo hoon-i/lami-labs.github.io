@@ -33,3 +33,6 @@ main:
   - name: Contact
     url: /contact/
     weight: 60
+  - name: Join LaMI
+    url: /join/
+    weight: 70

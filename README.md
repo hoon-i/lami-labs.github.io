@@ -114,9 +114,9 @@ lami-labs.github.io/
 │   ├── publications/_index.md     #   Publications
 │   ├── gallery/_index.md          #   Gallery
 │   ├── contact/_index.md          #   Contact (주소, 이메일, Office Hours)
+│   ├── join/_index.md             #   Join LaMI (모집 안내, 지원 폼 링크)
 │   ├── research/_index.md         #   Research (메뉴에는 없음, /research/ 직접 접속)
 │   ├── project/_index.md          #   Project (메뉴에는 없음)
-│   ├── application/_index.md      #   Join Us (메뉴에는 없음, 지원 폼으로 대체)
 │   └── calendar/_index.md         #   Calendar (메뉴에는 없음)
 │
 ├── data/                          # ★ 실제 콘텐츠 데이터 (가장 자주 수정)
@@ -130,7 +130,7 @@ lami-labs.github.io/
 │   ├── info/contact.yaml          #   Contact 페이지 주소/이메일/Office Hours
 │   ├── info/resources.yaml        #   (장비 카드 데이터, 현재 미사용)
 │   ├── info/contact_info.yaml     #   (구 연락처 카드 데이터, 현재 미사용)
-│   └── application/notice.yaml    #   Join Us 페이지 안내문
+│   └── application/notice.yaml    #   Join LaMI 페이지 안내문
 │
 ├── docs/examples/                 # 멤버/연구 YAML 예시 파일 (.example)
 │
@@ -203,13 +203,13 @@ lami-labs.github.io/
 | Contact | `/contact/` | `content/contact/_index.md` | `data/info/contact.yaml` | 없음 |
 | Research (메뉴 없음) | `/research/` | `content/research/_index.md` | `data/research/*.yaml` | `static/media/research/` |
 | Project (메뉴 없음) | `/project/` | `content/project/_index.md` | `data/project/projects.yaml` | 없음 |
-| Join Us (메뉴 없음) | `/application/` | `content/application/_index.md` | `data/application/notice.yaml` | 없음 |
+| Join LaMI | `/join/` | `content/join/_index.md` | `data/application/notice.yaml` | 없음 |
 | Calendar (메뉴 없음) | `/calendar/` | `content/calendar/_index.md` | 파일 안에 iframe 직접 작성 | 없음 |
 
 ### 홈 (`content/_index.md`)
 
 - **히어로**: `sections[0]` (`block: hero`)의 `title`, `text`, `announcement`를 수정. 배경은 `assets/media/home.png`.
-- **지원 링크(구글 폼)**: 히어로의 `announcement.link.url`과 소개 문단의 `Join us →` 링크 두 곳이 교수님 구글 폼으로 연결됩니다. 폼 주소가 바뀌면 이 두 곳과 `data/info/contact.yaml`, `data/application/notice.yaml`을 같이 수정하세요.
+- **지원 링크**: 히어로의 Apply 버튼과 소개 문단의 `Join us →` 링크는 `/join/` (Join LaMI 페이지)로 갑니다. 구글 폼 주소는 `data/application/notice.yaml`의 `buttons`에만 있습니다.
 - **연구실 소개 문단**: `id: intro` 블록의 HTML을 직접 수정.
 - **Research Areas 3단 카드**: `id: research-areas` 블록의 HTML에 직접 작성되어 있음. 연구 분야 제목/설명을 바꾸려면 여기를 수정.
 - **Latest News**: `{{< news-cards >}}` → `data/news/news.yaml`에서 최신 12개.
@@ -448,7 +448,7 @@ cards:                       # 오른쪽 카드. 순서대로 표시
       image: "robot.jpg"    # static/media/resource/
 ```
 
-### 6.8 Join Us — `data/application/notice.yaml`
+### 6.8 Join LaMI — `data/application/notice.yaml`
 
 ```yaml
 intro: |
@@ -511,7 +511,7 @@ tracks:
 
 상단 메뉴 목록. `weight`가 작을수록 왼쪽. 새 페이지를 만들면 여기에도 추가해야 메뉴에 보입니다.
 
-현재 메뉴는 Home, Members(Professor / Students / Alumni), News, Publications, Gallery, Contact 6개입니다. Research, Project, Join Us, Calendar 페이지는 존재하지만 메뉴에는 노출하지 않습니다.
+현재 메뉴는 Home, Members(Professor / Students / Alumni), News, Publications, Gallery, Contact, Join LaMI 7개입니다. Research, Project, Calendar 페이지는 존재하지만 메뉴에는 노출하지 않습니다.
 
 드롭다운 메뉴는 부모 항목에 `hasChildren: true`를 주고, 자식 항목에 `parent: <부모 name>`을 지정합니다. Members 메뉴가 이 방식으로 Professor / Students / Alumni 세 개의 하위 메뉴를 가집니다.
 
@@ -550,9 +550,7 @@ tracks:
 1. `data/info/contact.yaml` 수정
 
 **지원 폼 링크 변경**
-1. `content/_index.md` (히어로 버튼, 소개문 Join us 링크)
-2. `data/info/contact.yaml` (Join Us 카드)
-3. `data/application/notice.yaml` (Join Us 페이지)
+1. `data/application/notice.yaml`의 `buttons[].url`
 
 **새 페이지 추가**
 1. `content/<이름>/_index.md` 생성 (기존 페이지 복사 권장)

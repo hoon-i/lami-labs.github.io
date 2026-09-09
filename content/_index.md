@@ -17,7 +17,7 @@ sections:
         text: "We are recruiting M.S./Ph.D. students and undergraduate interns."
         link:
           text: "Apply"
-          url: "https://forms.gle/AUYdPRmsnc34Cevx7"  # 교수님 구글 폼 링크
+          url: "/join/"
     design:
       no_padding: true
       # For full-screen, add `min-h-screen` below
@@ -72,7 +72,7 @@ sections:
             Our research group is committed to building AI agents that are practical and trustworthy.
           </p>
           <p class="lab-intro-text" style="font-size: 1.1rem; line-height: 1.85; margin: 0;">
-            LaMI Lab is looking for curious, passionate, and highly motivated students (M.S./Ph.D.), as well as undergraduate interns to join our research group. <a href="https://forms.gle/AUYdPRmsnc34Cevx7" target="_blank" rel="noopener" class="lab-intro-link">Join us →</a>
+            LaMI Lab is looking for curious, passionate, and highly motivated students (M.S./Ph.D.), as well as undergraduate interns to join our research group. <a href="/join/" class="lab-intro-link">Join us →</a>
           </p>
         </div>
     design:
