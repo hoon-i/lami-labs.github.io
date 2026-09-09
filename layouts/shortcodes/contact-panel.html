@@ -1,0 +1,72 @@
+{{ $c := site.Data.info.contact | default dict }}
+{{ $addr := $c.address | default dict }}
+<style>
+  #contact .max-w-prose, #contact .prose { max-width: 1200px !important; width: 100% !important; }
+  .contact-wrap { display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin: 0 auto; }
+  @media (min-width: 900px) { .contact-wrap { grid-template-columns: 1.05fr 0.95fr; gap: 4rem; } }
+  .contact-eyebrow { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1e3a8a; margin: 0 0 0.6rem; }
+  .dark .contact-eyebrow { color: #93c5fd; }
+  .contact-title { font-size: 1.75rem; font-weight: 700; margin: 0 0 1.75rem; color: #111827; }
+  .dark .contact-title { color: #f1f5f9; }
+  .contact-place { border-left: 2px solid #e5e7eb; padding-left: 1.5rem; margin-bottom: 1.5rem; }
+  .dark .contact-place { border-color: #374151; }
+  .contact-place-title { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1e3a8a; margin: 0 0 0.5rem; }
+  .dark .contact-place-title { color: #93c5fd; }
+  .contact-place p { margin: 0; line-height: 1.6; color: #1f2937; font-size: 1rem; }
+  .contact-place p:first-of-type { font-weight: 600; }
+  .dark .contact-place p { color: #e2e8f0; }
+  .contact-divider { border: 0; border-top: 1px solid #e5e7eb; margin: 1.75rem 0; }
+  .dark .contact-divider { border-color: #374151; }
+  .contact-footer p { margin: 0 0 0.35rem; color: #4b5563; font-size: 0.98rem; line-height: 1.6; }
+  .contact-footer p:last-child { color: #9ca3af; }
+  .dark .contact-footer p { color: #cbd5e1; }
+  .dark .contact-footer p:last-child { color: #94a3b8; }
+  .contact-cards { display: flex; flex-direction: column; gap: 1.5rem; }
+  .contact-card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 1rem; padding: 2rem 2.25rem; }
+  .dark .contact-card { background: #1e293b; border-color: #334155; }
+  .contact-card-title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1e3a8a; margin: 0 0 1rem; }
+  .dark .contact-card-title { color: #93c5fd; }
+  .contact-card-value { font-size: 1.5rem; font-weight: 700; color: #111827; margin: 0 0 0.6rem; text-decoration: none; display: inline-block; word-break: break-all; }
+  .contact-card-value:hover { color: #1d4ed8; }
+  .dark .contact-card-value { color: #f8fafc; }
+  .contact-card-lines { list-style: none; margin: 0 0 0.25rem; padding: 0; }
+  .contact-card-lines li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid #e5e7eb; color: #1f2937; font-size: 0.98rem; }
+  .contact-card-lines li:last-child { border-bottom: 0; }
+  .contact-card-lines li strong { font-weight: 600; min-width: 3.5rem; }
+  .dark .contact-card-lines li { border-color: #334155; color: #e2e8f0; }
+  .contact-card-note { margin: 0; color: #4b5563; font-size: 0.98rem; line-height: 1.6; }
+  .contact-card-note a { text-decoration: underline; }
+  .dark .contact-card-note { color: #cbd5e1; }
+</style>
+<div class="contact-wrap">
+  <div class="contact-address">
+    {{ with $addr.eyebrow }}<p class="contact-eyebrow">{{ . }}</p>{{ end }}
+    {{ with $addr.title }}<h3 class="contact-title">{{ . }}</h3>{{ end }}
+    {{ range $addr.places }}
+      <div class="contact-place">
+        <p class="contact-place-title">{{ .title }}</p>
+        {{ range .lines }}<p>{{ . }}</p>{{ end }}
+      </div>
+    {{ end }}
+    {{ with $addr.footer }}
+      <hr class="contact-divider">
+      <div class="contact-footer">
+        {{ range . }}<p>{{ . }}</p>{{ end }}
+      </div>
+    {{ end }}
+  </div>
+  <div class="contact-cards">
+    {{ range $c.cards }}
+      <div class="contact-card">
+        <p class="contact-card-title">{{ .title }}</p>
+        {{ if .value }}{{ if .href }}<a class="contact-card-value" href="{{ .href }}">{{ .value }}</a>{{ else }}<p class="contact-card-value">{{ .value }}</p>{{ end }}{{ end }}
+        {{ with .lines }}
+          <ul class="contact-card-lines">
+            {{ range . }}<li>{{ . | markdownify }}</li>{{ end }}
+          </ul>
+        {{ end }}
+        {{ with .note }}<p class="contact-card-note">{{ . | markdownify }}</p>{{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>

@@ -1,0 +1,34 @@
+# Contact 페이지 데이터. 텍스트만 바꾸면 됩니다. (스키마: README 6.7)
+address:
+  eyebrow: Address
+  title: Visit Us
+  places:
+    - title: Professor's Office
+      lines:
+        - "Prof. Jisoo Mok"
+        - "#1001 구자겸기계관 · Gujagyeom Mechanical Engineering Bldg. Room 1001"
+  footer:
+    - "Department of Electronic Engineering"
+    - "Hanyang University"
+    - "222, Wangsimni-ro, Seongdong-gu, Seoul, Republic of Korea"
+    - "서울특별시 성동구 왕십리로 222, 한양대학교 구자겸기계관 1001호"
+
+cards:
+  - title: Email
+    value: jisoomok@hanyang.ac.kr
+    href: mailto:jisoomok@hanyang.ac.kr
+    note: Direct email to Prof. Jisoo Mok.
+  - title: Phone
+    value: +82 10-3470-1891
+    href: tel:+821034701891
+  - title: Office Hours
+    lines:
+      - "**Mon** 09:00–12:00 | 13:00–18:00"
+      - "**Tue** 09:00–12:00 | 14:00–18:00"
+      - "**Wed** 09:00–12:00"
+      - "**Thu** 09:00–12:00 | 13:00–15:00"
+      - "**Fri** 09:00–12:00"
+  - title: Join Us
+    value: Application Form
+    href: https://forms.gle/AUYdPRmsnc34Cevx7
+    note: We are recruiting M.S./Ph.D. students and undergraduate interns. Please submit the form to apply.
