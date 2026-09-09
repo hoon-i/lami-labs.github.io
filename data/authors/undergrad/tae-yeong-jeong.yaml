@@ -1,0 +1,17 @@
+schema: hugoblox/author/v1
+slug: tae-yeong-jeong                 # 사진: static/media/authors/undergrad/tae-yeong-jeong.jpg
+is_owner: false
+category: Interns
+order: 3
+name:
+  display: Tae Yeong Jeong
+  given: Tae Yeong
+  family: Jeong
+role: |-
+  Undergraduate Intern (DGIST)
+tags:
+  - Multimodal Modeling
+links:
+  - icon: at-symbol
+    url: mailto:jty@dgist.ac.kr
+    label: E-mail

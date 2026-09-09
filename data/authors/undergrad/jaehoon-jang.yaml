@@ -1,0 +1,17 @@
+schema: hugoblox/author/v1
+slug: jaehoon-jang                 # 사진: static/media/authors/undergrad/jaehoon-jang.jpg
+is_owner: false
+category: Interns
+order: 1
+name:
+  display: Jaehoon Jang
+  given: Jaehoon
+  family: Jang
+role: |-
+  Undergraduate Intern (HUFS)
+tags:
+  - LLM Fundamentals
+links:
+  - icon: at-symbol
+    url: mailto:hooni@hufs.ac.kr
+    label: E-mail

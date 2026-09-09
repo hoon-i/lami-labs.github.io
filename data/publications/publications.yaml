@@ -1,16 +1,238 @@
-# Publications list. Uncomment and copy the example entry per paper.
-# Optional link fields per publication: paper, supp, page, code, link
-#- slug: Example-2026
-#  title: "Example Paper Title"
-#  authors:
-#    - Firstname Lastname*
-#    - Firstname Lastname†
-#  venue: CVPR
-#  category: conference        # conference | journal | workshop | preprint
-#  date: 2026-06-01
-#  method: Method Area
-#  domain: Application Domain
-#  task: Task Name
-#  links:
-#    paper: https://example.com/paper.pdf
-#    code: https://github.com/username/repo
+# Publications list (newest first by date). * = equal contribution, † = corresponding author.
+# Optional link fields per publication: paper, supp, page, code, link  (스키마: README 6.3)
+
+- slug: C17
+  title: "MobileKGQA: On-Device KGQA System on Dynamic Mobile Environments"
+  authors:
+    - "Junyong Ahn"
+    - "Hyeongrok Han"
+    - "Bong Gyun Kang"
+    - "Jisoo Mok"
+    - "Byunghan Lee"
+    - "Sungroh Yoon"
+  venue: "ICLR 2026"
+  category: conference
+  date: 2026-04-01
+  links: {}
+
+- slug: C16
+  title: "SAVE: Sparse Autoencoder-Driven Visual Information Enhancement for Mitigating Object Hallucination"
+  authors:
+    - "Sangha Park"
+    - "Seungryong Yoo"
+    - "Jisoo Mok†"
+    - "Sungroh Yoon†"
+  venue: "WACV 2026"
+  category: conference
+  date: 2026-03-01
+  links: {}
+
+- slug: C15
+  title: "CANDI: Curated Test-time Adaptation for Multivariate Time-series Anomaly Detection under Distribution Shift"
+  authors:
+    - "HyunGi Kim"
+    - "Jisoo Mok"
+    - "Hyungyu Lee"
+    - "Juhyeon Shin"
+    - "Sungroh Yoon"
+  venue: "AAAI 2026"
+  category: conference
+  date: 2026-02-01
+  links: {}
+
+- slug: C14
+  title: "RePIC: Reinforced Post-Training for Personalizing Multi-Modal Language Models"
+  authors:
+    - "Yeongtak Oh"
+    - "Dohyun Chung"
+    - "Juhyeon Shin"
+    - "Sangha Park"
+    - "Johan Barthelemy"
+    - "Jisoo Mok†"
+    - "Sungroh Yoon†"
+  venue: "NeurIPS 2025"
+  category: conference
+  date: 2025-12-01
+  note: "NVIDIA Academic Grant"
+  links: {}
+
+- slug: C13
+  title: "Exploring the Potential of LLMs as Personalized Assistants: Dataset, Evaluation, and Analysis"
+  authors:
+    - "Jisoo Mok*"
+    - "Ik-hwan Kim*"
+    - "Sangkwon Park*"
+    - "Sungroh Yoon"
+  venue: "ACL 2025"
+  category: conference
+  date: 2025-07-02
+  links: {}
+
+- slug: C12
+  title: "Causality-Aware Contrastive Learning for Robust Multivariate Time-Series Anomaly Detection"
+  authors:
+    - "HyunGi Kim"
+    - "Jisoo Mok"
+    - "Dongjun Lee"
+    - "Jaihyun Lew"
+    - "Sungroh Yoon"
+  venue: "ICML 2025"
+  category: conference
+  date: 2025-07-01
+  links: {}
+
+- slug: C11
+  title: "Battling the Non-stationarity in Time Series Forecasting via Test-time Adaptation"
+  authors:
+    - "HyunGi Kim"
+    - "Siwon Kim"
+    - "Jisoo Mok"
+    - "Sungroh Yoon"
+  venue: "AAAI 2025"
+  category: conference
+  date: 2025-02-01
+  links: {}
+
+- slug: C10
+  title: "LLM-based Frameworks for API Argument Filling in Task-Oriented Conversational Systems"
+  authors:
+    - "Jisoo Mok"
+    - "Mohammad Kachuee"
+    - "Shuyang Dai"
+    - "Shayan Ray"
+    - "Tara Taghavi"
+    - "Sungroh Yoon"
+  venue: "NAACL 2024 (Industry Track)"
+  category: conference
+  date: 2024-06-01
+  note: "Amazon Collaboration"
+  links: {}
+
+- slug: C9
+  title: "Textual Training for the Hassle-Free Removal of Unwanted Visual Data"
+  authors:
+    - "Saehyung Lee"
+    - "Jisoo Mok"
+    - "Sangha Park"
+    - "Dahuin Jung"
+    - "Sungroh Yoon"
+  venue: "NeurIPS 2024"
+  category: conference
+  date: 2024-12-01
+  links: {}
+
+- slug: C8
+  title: "Large-scale Lifelong Learning of In-context Instructions and How to Tackle It"
+  authors:
+    - "Jisoo Mok"
+    - "Jaeyoung Do"
+    - "Sungjin Lee"
+    - "Tara Taghavi"
+    - "Seunghak Yu"
+    - "Sungroh Yoon"
+  venue: "ACL 2023"
+  category: conference
+  date: 2023-07-01
+  note: "Amazon Collaboration"
+  links: {}
+
+- slug: C7
+  title: "On the Powerfulness of Textual Outliers for Visual OoD Detection"
+  authors:
+    - "Sangha Park"
+    - "Jisoo Mok"
+    - "Dahuin Jung"
+    - "Saehyung Lee"
+    - "Sungroh Yoon"
+  venue: "NeurIPS 2023"
+  category: conference
+  date: 2023-12-01
+  links: {}
+
+- slug: C6
+  title: "Demystifying the Neural Tangent Kernel from a Practical Perspective: Can it be trusted for Neural Architecture Search without training?"
+  authors:
+    - "Jisoo Mok"
+    - "Byunggook Na"
+    - "Jihoon Kim"
+    - "Dongyoon Han"
+    - "Sungroh Yoon"
+  venue: "CVPR 2022"
+  category: conference
+  date: 2022-06-01
+  note: "NAVER AI Lab Collaboration"
+  links: {}
+
+- slug: C5
+  title: "AutoSNN: Towards Energy-Efficient Spiking Neural Networks"
+  authors:
+    - "Byunggook Na"
+    - "Jisoo Mok"
+    - "Seongsik Park"
+    - "Dongjin Lee"
+    - "Hyeokjun Choe"
+    - "Sungroh Yoon"
+  venue: "ICML 2022"
+  category: conference
+  date: 2022-07-01
+  links: {}
+
+- slug: C4
+  title: "AdvRush: Searching for Adversarially Robust Neural Architectures"
+  authors:
+    - "Jisoo Mok"
+    - "Byunggook Na"
+    - "Hyeokjun Choe"
+    - "Sungroh Yoon"
+  venue: "ICCV 2021"
+  category: conference
+  date: 2021-10-01
+  links: {}
+
+- slug: C3
+  title: "Variance-stationary Differentiable NAS"
+  authors:
+    - "Hyeokjun Choe"
+    - "Byunggook Na"
+    - "Jisoo Mok"
+    - "Sungroh Yoon"
+  venue: "BMVC 2021"
+  category: conference
+  date: 2021-11-01
+  links: {}
+
+- slug: C2
+  title: "Reducing Information Bottleneck for Weakly Supervised Semantic Segmentation"
+  authors:
+    - "Jungbeom Lee"
+    - "Jooyoung Choi"
+    - "Jisoo Mok"
+    - "Sungroh Yoon"
+  venue: "NeurIPS 2021"
+  category: conference
+  date: 2021-12-01
+  links: {}
+
+- slug: C1
+  title: "Accelerating Neural Architecture Search via Proxy Data"
+  authors:
+    - "Byunggook Na"
+    - "Jisoo Mok"
+    - "Hyeokjun Choe"
+    - "Sungroh Yoon"
+  venue: "IJCAI 2021"
+  category: conference
+  date: 2021-08-01
+  links: {}
+
+- slug: J1
+  title: "Anti-Adversarially Manipulated Attributions for Weakly Supervised Semantic Segmentation and Object Localization"
+  authors:
+    - "Jungbeom Lee"
+    - "Eunji Kim"
+    - "Jisoo Mok"
+    - "Sungroh Yoon"
+  venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2022"
+  category: journal
+  date: 2022-01-01
+  links: {}

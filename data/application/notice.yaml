@@ -1,10 +1,11 @@
 intro: |
-  We are looking for passionate students to join our lab.
-  Please read the track descriptions below and apply via the button.
+  LaMI Lab is looking for curious, passionate, and highly motivated students (M.S./Ph.D.),
+  as well as undergraduate interns to join our research group.
+  Please submit the form below to apply.
 
 buttons:
   - label: "Apply 🚀"
-    url: "https://forms.gle/xxxx"
+    url: "https://forms.gle/AUYdPRmsnc34Cevx7"
     variant: "primary"
     new_tab: true
 
@@ -12,13 +13,9 @@ tracks:
   - title: "Undergraduate Intern"
     badge: "Rolling admission"
     content: |
-      Describe the undergraduate intern track here.
+      We welcome undergraduate students who want hands-on research experience with LLMs and multimodal models.
 
   - title: "Graduate Students (M.S. / Ph.D.)"
     badge: "Now recruiting"
     content: |
-      Describe the graduate student track here.
-
-      ### Who we look for
-      - Item 1
-      - Item 2
+      We are recruiting M.S. and Ph.D. students in the Department of Electronic Engineering, Hanyang University.

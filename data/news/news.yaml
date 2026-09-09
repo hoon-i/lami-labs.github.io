@@ -1,7 +1,50 @@
-# News items (newest first). Images go in static/media/news/.
-#- date: 2026-01
-#  type: Honor              # Honor | Project | Events | Publication | ...
-#  title: "Example news headline"
-#  description: |-
-#    One or two sentences of detail.
-#  image: "media/news/example.png"
+# News items (newest first). Images go in static/media/news/ and are optional.
+# type: Honor | Project | Events | Publication
+
+- date: 2026-02
+  type: Events
+  title: "Prof. Mok gave a technical talk at Sungkyunkwan University"
+  description: |-
+    Prof. Mok gave a technical talk on her recent research @ Sungkyunkwan University.
+
+- date: 2026-01
+  type: Publication
+  title: "One paper accepted to ICLR 2026"
+  description: |-
+    MobileKGQA: On-Device KGQA System on Dynamic Mobile Environments.
+
+- date: 2025-12
+  type: Events
+  title: "Special lecture at Pusan National University"
+  description: |-
+    Prof. Mok delivered a special lecture on Recent Topics in LLM Research @ Pusan National University.
+
+- date: 2025-11
+  type: Publication
+  title: "One paper accepted to WACV 2026"
+  description: |-
+    SAVE: Sparse Autoencoder-Driven Visual Information Enhancement for Mitigating Object Hallucination.
+
+- date: 2025-11
+  type: Publication
+  title: "One paper accepted to AAAI 2026"
+  description: |-
+    CANDI: Curated Test-time Adaptation for Multivariate Time-series Anomaly Detection under Distribution Shift.
+
+- date: 2025-09
+  type: Publication
+  title: "One paper accepted to NeurIPS 2025"
+  description: |-
+    RePIC: Reinforced Post-Training for Personalizing Multi-Modal Language Models.
+
+- date: 2025-09
+  type: Events
+  title: "Lecture series at LG Electronics CTO Department"
+  description: |-
+    Prof. Mok delivered a 3-day lecture series on Large Language Models @ LG Electronics CTO Department.
+
+- date: 2025-09
+  type: Events
+  title: "Hello, LaMI!"
+  description: |-
+    The Language-driven Multimodal Intelligence Lab officially opens.

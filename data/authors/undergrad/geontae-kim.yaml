@@ -1,0 +1,17 @@
+schema: hugoblox/author/v1
+slug: geontae-kim                 # 사진: static/media/authors/undergrad/geontae-kim.jpg
+is_owner: false
+category: Interns
+order: 2
+name:
+  display: Geontae Kim
+  given: Geontae
+  family: Kim
+role: |-
+  Undergraduate Intern (Dongguk University)
+tags:
+  - Multimodal Modeling
+links:
+  - icon: at-symbol
+    url: mailto:goeric342@dgu.ac.kr
+    label: E-mail

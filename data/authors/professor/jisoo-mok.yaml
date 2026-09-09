@@ -1,0 +1,24 @@
+schema: hugoblox/author/v1
+slug: jisoo-mok                 # 사진: static/media/authors/professor/jisoo-mok.jpg
+is_owner: true
+category: PI
+order: 1
+name:
+  display: Jisoo Mok
+  given: Jisoo
+  family: Mok
+role: Assistant Professor
+bio: Department of Electronic Engineering, Hanyang University
+tags:
+  - Multimodal LLMs
+  - Trustworthy AI
+affiliations:
+  - name: Hanyang University
+    url: https://www.hanyang.ac.kr
+links:
+  - icon: at-symbol
+    url: mailto:jisoomok@hanyang.ac.kr
+    label: E-mail
+  - icon: academicons/google-scholar
+    url: ""                      # Google Scholar 프로필 URL 입력
+    label: Google Scholar

@@ -1,0 +1,17 @@
+schema: hugoblox/author/v1
+slug: jimin-kim                 # 사진: static/media/authors/undergrad/jimin-kim.jpg
+is_owner: false
+category: Interns
+order: 5
+name:
+  display: Jimin Kim
+  given: Jimin
+  family: Kim
+role: |-
+  Undergraduate Intern (Jeonbuk National University)
+tags:
+  - LLM
+links:
+  - icon: at-symbol
+    url: mailto:erica1010@jbnu.ac.kr
+    label: E-mail

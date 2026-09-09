@@ -1,0 +1,17 @@
+schema: hugoblox/author/v1
+slug: seunghee-lee                 # 사진: static/media/authors/undergrad/seunghee-lee.jpg
+is_owner: false
+category: Interns
+order: 6
+name:
+  display: Seunghee Lee
+  given: Seunghee
+  family: Lee
+role: |-
+  Undergraduate Intern (HUFS)
+tags:
+  - LLM
+links:
+  - icon: at-symbol
+    url: mailto:shamy0527@hufs.ac.kr
+    label: E-mail
