@@ -7,7 +7,12 @@ name:
   display: Jaehoon Jang
   given: Jaehoon
   family: Jang
-role: |-                      # 한 줄씩 카드에 표시됩니다 (HTML 사용 가능)
-  🎓 HUFS
-  🔬 LLM Fundamentals
-  ✉️ <a href="mailto:hooni@hufs.ac.kr">hooni@hufs.ac.kr</a>
+role: |-                      # 여러 줄 가능. 둘째 줄에 출신 학교
+  Undergraduate Intern
+  HUFS
+tags:
+  - LLM Fundamentals
+links:
+  - icon: at-symbol
+    url: mailto:hooni@hufs.ac.kr
+    label: E-mail

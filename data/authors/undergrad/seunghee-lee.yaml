@@ -7,7 +7,12 @@ name:
   display: Seunghee Lee
   given: Seunghee
   family: Lee
-role: |-                      # 한 줄씩 카드에 표시됩니다 (HTML 사용 가능)
-  🎓 HUFS
-  🔬 LLM
-  ✉️ <a href="mailto:shamy0527@hufs.ac.kr">shamy0527@hufs.ac.kr</a>
+role: |-                      # 여러 줄 가능. 둘째 줄에 출신 학교
+  Undergraduate Intern
+  HUFS
+tags:
+  - LLM
+links:
+  - icon: at-symbol
+    url: mailto:shamy0527@hufs.ac.kr
+    label: E-mail

@@ -269,14 +269,16 @@ name:
   display: Jaehoon Jang
   given: Jaehoon
   family: Jang
-role: |-                    # 한 줄씩 카드에 표시. HTML 사용 가능. "Lab Representative" 문구는 자동 강조됨
-  🎓 HUFS
-  🔬 LLM Fundamentals
-  ✉️ <a href="mailto:name@example.edu">name@example.edu</a>
-tags:                       # (선택) 연구 분야 배지
+role: |-                    # 여러 줄 가능. 첫 줄 과정, 둘째 줄 출신 학교. "Lab Representative" 문구는 자동 강조됨
+  Undergraduate Intern
+  HUFS
+tags:                       # 연구 분야 배지
   - LLM Fundamentals
 hidden_image: jaehoon-jang-2.jpg   # (선택) hover 시 보일 사진, static/media/authors/hidden/ 에 위치
-links:                      # (선택) 아이콘 링크 줄. 없으면 표시되지 않음
+links:                      # 아이콘 링크 줄. 없으면 표시되지 않음. at-symbol은 아이콘 옆에 주소가 함께 표시됨
+  - icon: at-symbol
+    url: mailto:name@example.edu
+    label: E-mail
   - icon: brands/github
     url: https://github.com/username
     label: GitHub

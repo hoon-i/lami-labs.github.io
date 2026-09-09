@@ -7,7 +7,12 @@ name:
   display: Sihyeong Kim
   given: Sihyeong
   family: Kim
-role: |-                      # 한 줄씩 카드에 표시됩니다 (HTML 사용 가능)
-  🎓 DGIST
-  🔬 Multimodal Modeling
-  ✉️ <a href="mailto:tlgud0819@dgist.ac.kr">tlgud0819@dgist.ac.kr</a>
+role: |-                      # 여러 줄 가능. 둘째 줄에 출신 학교
+  Undergraduate Intern
+  DGIST
+tags:
+  - Multimodal Modeling
+links:
+  - icon: at-symbol
+    url: mailto:tlgud0819@dgist.ac.kr
+    label: E-mail

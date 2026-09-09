@@ -7,7 +7,12 @@ name:
   display: Geontae Kim
   given: Geontae
   family: Kim
-role: |-                      # 한 줄씩 카드에 표시됩니다 (HTML 사용 가능)
-  🎓 Dongguk University
-  🔬 Multimodal Modeling
-  ✉️ <a href="mailto:goeric342@dgu.ac.kr">goeric342@dgu.ac.kr</a>
+role: |-                      # 여러 줄 가능. 둘째 줄에 출신 학교
+  Undergraduate Intern
+  Dongguk University
+tags:
+  - Multimodal Modeling
+links:
+  - icon: at-symbol
+    url: mailto:goeric342@dgu.ac.kr
+    label: E-mail
