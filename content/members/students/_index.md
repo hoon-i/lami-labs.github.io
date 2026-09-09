@@ -10,10 +10,22 @@ sections:
   - block: markdown
     id: phd-students
     content:
-      title: Ph.D Students
+      title: Ph.D. Students
       text: |
         <div class="members-section-divider"></div>
         {{< members-phd >}}
+    design:
+      spacing:
+        padding: ["2rem", 0, "2rem", 0]
+      css_style: "max-width: 100% !important; width: 100% !important;"
+      container: false
+  - block: markdown
+    id: integrated-students
+    content:
+      title: Integrated M.S./Ph.D. Students
+      text: |
+        <div class="members-section-divider"></div>
+        {{< members-integrated >}}
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
@@ -34,7 +46,7 @@ sections:
   - block: markdown
     id: interns
     content:
-      title: Undergraduate Students
+      title: Interns
       text: |
         <div class="members-section-divider"></div>
         {{< members-interns >}}

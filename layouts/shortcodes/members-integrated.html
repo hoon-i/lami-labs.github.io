@@ -1,0 +1,188 @@
+<style>
+  #integrated-students .container,
+  #integrated-students .prose,
+  section[id="integrated-students"] .container,
+  section[id="integrated-students"] .prose,
+  section[id="integrated-students"] > *,
+  section[id="integrated-students"] > * > *,
+  [id="integrated-students"] .container,
+  [id="integrated-students"] .prose,
+  [id="integrated-students"] > div,
+  [id="integrated-students"] > div > div {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  section[id="integrated-students"] [class*="max-w"],
+  [id="integrated-students"] [class*="max-w"] {
+    max-width: 100% !important;
+  }
+  
+  /* Scroll animation styles */
+  .people-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .people-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .people-card h3 {
+    font-size: 1.3rem !important;
+    line-height: 1.35;
+    margin-top: 0 !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .people-card .people-role {
+    margin-top: 0.35rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .people-photo-frame {
+    width: 95%;
+    aspect-ratio: 3 / 4;
+    margin-bottom: 0.6rem !important;
+    margin-top: -0.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 0.375rem;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    align-self: center;
+  }
+
+  .people-photo-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: inherit;
+  }
+
+  @media (max-width: 767px) {
+    .people-photo-frame {
+      max-width: 220px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>
+<div style="width: 100%; max-width: 1220px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem;">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+  {{ $filtered := slice }}
+  {{ range $k, $v := site.Data.authors }}
+    {{ if isset $v "slug" }}
+      {{ if eq $v.category "Integrated Students" }}
+        {{ $filtered = $filtered | append $v }}
+      {{ end }}
+    {{ else }}
+      {{ range $kk, $vv := $v }}
+        {{ if eq $vv.category "Integrated Students" }}
+          {{ $filtered = $filtered | append $vv }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ if eq (len $filtered) 0 }}
+      <script>
+      (function() {
+        const section = document.getElementById("integrated-students");
+        if (section) section.style.display = "none";
+      })();
+      </script>
+  {{ else }}
+  {{ range sort $filtered "order" }}
+      <div class="people-card bg-white dark:bg-gray-800 rounded-lg shadow-md px-6 pt-0 pb-5">
+        <div class="flex flex-col items-center text-center">
+          {{ $image := partial "authors/author-image" . | strings.TrimSpace }}
+          {{ $hoverImage := partial "authors/author-hover-image" . | strings.TrimSpace }}
+          <div class="people-photo-frame">
+            <img src="{{ $image }}" alt="{{ .name.display }}" class="w-full h-full object-cover" loading="lazy" decoding="async" fetchpriority="low" {{ if ne $hoverImage "" }}data-hover-src="{{ $hoverImage }}"{{ end }} onerror="this.src='{{ "media/authors/me.jpg" | relURL }}'">
+          </div>
+          <h3 class="text-lg font-semibold mb-1">{{ .name.display }}</h3>
+          {{ $roleHTML := .role | default "" }}
+          {{ $roleHTML = replaceRE `\r?\n` "<br>" $roleHTML }}
+          {{ $roleHTML = replace $roleHTML "Lab Representative" "<span class=\"font-bold text-blue-600 dark:text-blue-400\">Lab Representative</span>" }}
+          <p class="people-role text-sm text-gray-600 dark:text-gray-400">{{ $roleHTML | safeHTML }}</p>
+          {{ if .tags }}
+            <div class="flex flex-wrap gap-2 mb-3 justify-center">
+              {{ range .tags }}
+                <span class="px-2 py-1 text-xs rounded bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-200">{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+          {{ if .links }}
+            <div class="flex gap-3">
+              {{ range .links }}
+                {{ $linkURL := .url | default "" | strings.TrimSpace }}
+                <a {{ if $linkURL }}href="{{ $linkURL }}"{{ end }} class="{{ if $linkURL }}text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400{{ else }}text-gray-300 dark:text-gray-600 opacity-70 pointer-events-none cursor-not-allowed{{ end }}" aria-label="{{ .label }}" {{ if not $linkURL }}aria-disabled="true" tabindex="-1"{{ end }}>
+                  {{ if eq .icon "at-symbol" }}
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                  {{ else if eq .icon "brands/github" }}
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg>
+                  {{ else if eq .icon "brands/linkedin" }}
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/></svg>
+                  {{ else if eq .icon "academicons/google-scholar" }}
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+                  {{ else if or (eq .icon "brands/x") (eq .icon "homepage") }}
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M10.707 1.293a1 1 0 00-1.414 0l-8 8A1 1 0 002 11h1v7a1 1 0 001 1h4a1 1 0 001-1V13h2v5a1 1 0 001 1h4a1 1 0 001-1v-7h1a1 1 0 00.707-1.707l-8-8z"/>
+                    </svg>
+                  {{ end }}
+                </a>
+              {{ end }}
+            </div>
+          {{ else }}
+            <div class="flex gap-3 text-gray-300 dark:text-gray-600 opacity-70 pointer-events-none select-none" aria-hidden="true">
+              <span class="cursor-not-allowed">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+              </span>
+              <span class="cursor-not-allowed">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span class="cursor-not-allowed">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/></svg>
+              </span>
+              <span class="cursor-not-allowed">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+              </span>
+              <span class="cursor-not-allowed">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M10.707 1.293a1 1 0 00-1.414 0l-8 8A1 1 0 002 11h1v7a1 1 0 001 1h4a1 1 0 001-1V13h2v5a1 1 0 001 1h4a1 1 0 001-1v-7h1a1 1 0 00.707-1.707l-8-8z"/>
+                </svg>
+              </span>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+  {{ end }}
+  {{ end }}
+  </div>
+</div>
+
+<script>
+(function() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+  
+  // Observe all people cards
+  document.querySelectorAll('.people-card').forEach(el => {
+    observer.observe(el);
+  });
+})();
+</script>
+

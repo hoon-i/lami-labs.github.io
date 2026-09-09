@@ -5,6 +5,8 @@
 #postdoc .prose,
 #phd-students .container,
 #phd-students .prose,
+#integrated-students .container,
+#integrated-students .prose,
 #master-students .container,
 #master-students .prose,
 #interns .container,
@@ -19,6 +21,7 @@
 #pi .container > *,
 #postdoc .container > *,
 #phd-students .container > *,
+#integrated-students .container > *,
 #master-students .container > *,
 #interns .container > *,
 #alumni .container > * {
@@ -29,6 +32,7 @@
 section[id="pi"] .container,
 section[id="postdoc"] .container,
 section[id="phd-students"] .container,
+section[id="integrated-students"] .container,
 section[id="master-students"] .container,
 section[id="interns"] .container,
 section[id="alumni"] .container {

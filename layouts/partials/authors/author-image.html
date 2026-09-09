@@ -6,6 +6,8 @@
   {{- $folder = "postdoc" -}}
 {{- else if eq $a.category "PhD Students" -}}
   {{- $folder = "phd" -}}
+{{- else if eq $a.category "Integrated Students" -}}
+  {{- $folder = "integrated" -}}
 {{- else if eq $a.category "Master Students" -}}
   {{- $folder = "master" -}}
 {{- else if or (eq $a.category "Interns") (eq $a.category "Undergraduate Students") -}}

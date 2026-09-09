@@ -108,7 +108,7 @@ lami-labs.github.io/
 │   ├── _index.md                  #   홈
 │   ├── members/_index.md          #   Members (전체 목록, 메뉴에는 없음)
 │   ├── members/professor/_index.md #  Members > Professor (교수 카드 + 소개/학력/경력, 포닥)
-│   ├── members/students/_index.md #   Members > Students (박사, 석사, 학부생, 졸업생)
+│   ├── members/students/_index.md #   Members > Students (박사, 석박통합, 석사, 인턴, 졸업생)
 │   ├── news/_index.md             #   News
 │   ├── publications/_index.md     #   Publications
 │   ├── gallery/_index.md          #   Gallery
@@ -120,7 +120,7 @@ lami-labs.github.io/
 │
 ├── data/                          # ★ 실제 콘텐츠 데이터 (가장 자주 수정)
 │   ├── authors/                   #   멤버 (카테고리별 폴더, 한 명당 YAML 하나)
-│   │   ├── professor/  postdoc/  phd/  master/  undergrad/  Alumni/
+│   │   ├── professor/  postdoc/  phd/  integrated/  master/  undergrad/  Alumni/
 │   ├── research/                  #   연구 주제 (Research 페이지용, 현재 비어 있음)
 │   ├── publications/publications.yaml
 │   ├── project/projects.yaml
@@ -138,6 +138,7 @@ lami-labs.github.io/
 │   │   ├── members-pi.html        #     교수 카드
 │   │   ├── members-postdoc.html   #     포닥 카드
 │   │   ├── members-phd.html       #     박사과정 카드
+│   │   ├── members-integrated.html #    석박통합과정 카드
 │   │   ├── members-master.html    #     석사과정 카드
 │   │   ├── members-interns.html   #     학부생/인턴 카드
 │   │   ├── members-alumni.html    #     졸업생 목록
@@ -192,7 +193,7 @@ lami-labs.github.io/
 |---|---|---|---|---|
 | Home | `/` | `content/_index.md` | `data/news/news.yaml` | `assets/media/home.png` (배경) |
 | Members > Professor | `/members/professor/` | `content/members/professor/_index.md` | `data/authors/**/*.yaml` (PI, Postdoc) | `static/media/authors/<카테고리>/` |
-| Members > Students | `/members/students/` | `content/members/students/_index.md` | `data/authors/**/*.yaml` (PhD, Master, Interns, Alumni) | `static/media/authors/<카테고리>/` |
+| Members > Students | `/members/students/` | `content/members/students/_index.md` | `data/authors/**/*.yaml` (PhD, Integrated, Master, Interns, Alumni) | `static/media/authors/<카테고리>/` |
 | Members (전체) | `/members/` | `content/members/_index.md` | 위 전체 | 메뉴에 노출되지 않음 |
 | News | `/news/` | `content/news/_index.md` | `data/news/news.yaml` | `static/media/news/` |
 | Publications | `/publications/` | `content/publications/_index.md` | `data/publications/publications.yaml` | 없음 (아이콘만) |
@@ -245,9 +246,10 @@ lami-labs.github.io/
 |---|---|---|
 | `PI` | Professor 페이지 / Professor | `professor/` |
 | `Postdoc` | Professor 페이지 / Post Doc | `postdoc/` |
-| `PhD Students` | Students 페이지 / Ph.D Students | `phd/` |
+| `PhD Students` | Students 페이지 / Ph.D. Students | `phd/` |
+| `Integrated Students` | Students 페이지 / Integrated M.S./Ph.D. Students | `integrated/` |
 | `Master Students` | Students 페이지 / M.S. Students | `master/` |
-| `Interns` | Students 페이지 / Undergraduate Students | `undergrad/` |
+| `Interns` | Students 페이지 / Interns | `undergrad/` |
 | `Alumni` | Students 페이지 / Alumni | (사진 없음) |
 
 > Alumni는 예외적으로 **폴더 이름이 `Alumni`인 것**을 기준으로 수집합니다. 반드시 `data/authors/Alumni/` 안에 두세요.
@@ -470,7 +472,7 @@ tracks:
 | 헤더 로고 | `assets/media/logo.png` | `params.yaml`의 `identity.logo`, `header.logo`에서 참조 |
 | 홈 히어로 배경 | `assets/media/home.png` | `content/_index.md`의 `background.image.filename` |
 | 파비콘 | `static/favicon.png` | JS로 강제 교체하므로 이 파일만 바꾸면 됨 |
-| 멤버 사진 | `static/media/authors/{professor,postdoc,phd,master,undergrad}/<slug>.jpg` | 3:4 비율 권장 |
+| 멤버 사진 | `static/media/authors/{professor,postdoc,phd,integrated,master,undergrad}/<slug>.jpg` | 3:4 비율 권장 |
 | 멤버 hover 사진 | `static/media/authors/hidden/<파일명>` | YAML의 `hidden_image` |
 | 멤버 기본 사진 | `static/media/authors/me.jpg` | 사진 없을 때 대체 이미지 (현재 없음, 추가 권장) |
 | 연구 주제 이미지 | `static/media/research/` | jpg/png/gif |
