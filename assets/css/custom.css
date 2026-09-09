@@ -228,20 +228,38 @@ section#section-hero > .home-section-bg.bg-image {
   color: var(--nav-accent)  !important;
 }
 
-/* Light mode surface tuning: slightly gray page background */
+/* Light mode surface tuning: warm off-white page background (원본 테마의 차가운 회색과 차별화) */
+:root {
+  --page-bg: #f6f4ef;      /* 본문/섹션 배경 */
+  --header-bg: #fbfaf7;    /* 헤더/푸터 배경 */
+}
 html:not(.dark) body,
 html:not(.dark) main {
-  background-color: #f2f4f7 !important;
+  background-color: var(--page-bg) !important;
 }
 
 html:not(.dark) section[id]:not(#section-hero) {
-  background-color: #f2f4f7 !important;
+  background-color: var(--page-bg) !important;
+}
+
+html:not(.dark) #site-header,
+html:not(.dark) #site-header .navbar,
+html:not(.dark) footer {
+  background-color: var(--header-bg) !important;
 }
 
 /* Make key content cards blend with page background */
 html:not(.dark) #publications .publication-card,
 html:not(.dark) #project .project-card {
-  background-color: #f2f4f7 !important;
+  background-color: var(--page-bg) !important;
+}
+
+/* White cards get a soft warm border so they sit on the off-white page */
+html:not(.dark) .people-card,
+html:not(.dark) .news-card,
+html:not(.dark) .contact-card,
+html:not(.dark) .ra-card {
+  border: 1px solid #e8e4dc !important;
 }
 
 /* Global dark mode surface tuning: gray section background + translucent navy cards */
