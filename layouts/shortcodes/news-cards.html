@@ -46,6 +46,15 @@
     min-height: 11rem;
   }
 
+  /* 이미지 없는 뉴스: 텍스트만 한 열로 */
+  .news-card-row--noimage {
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-height: 0 !important;
+  }
+  .news-card-home-content--noimage {
+    padding-top: 1rem !important;
+    min-height: 9rem;
+  }
   .news-card-row > img,
   .news-card-image-placeholder {
     margin: 0 !important;
@@ -408,10 +417,8 @@
             alt="{{ $itemTitle }}"
             class="news-card-home-image"
           >
-        {{ else }}
-          <div class="news-card-home-image-placeholder"></div>
         {{ end }}
-        <div class="news-card-home-content">
+        <div class="news-card-home-content{{ if not $itemImage }} news-card-home-content--noimage{{ end }}">
           <h3 class="news-card-home-title font-semibold mb-2 leading-snug text-gray-900 dark:text-gray-100" data-news-href="{{ $newsAnchorHref }}" role="link" tabindex="0">{{ $itemTitle }}</h3>
           <p class="news-card-home-desc text-[11px] sm:text-xs md:text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">{{ $itemDescHTML | safeHTML }}</p>
           <div class="news-card-home-meta">
@@ -432,15 +439,13 @@
           </div>
         </div>
       {{ else }}
-        <div class="news-card-row">
+        <div class="news-card-row{{ if not $itemImage }} news-card-row--noimage{{ end }}">
           {{ if $itemImage }}
             <img
               src="{{ $itemImage | relURL }}"
               alt="{{ $itemTitle }}"
               class="w-full aspect-[4/3] object-cover rounded-md"
             >
-          {{ else }}
-            <div class="news-card-image-placeholder w-full aspect-[4/3] rounded-md bg-white border border-gray-200"></div>
           {{ end }}
 
           <div class="flex-1 min-w-0 flex flex-col">

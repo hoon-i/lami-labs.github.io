@@ -384,7 +384,7 @@ order: 1                    # 정렬 순서
   title: "One paper accepted to ICLR 2026"
   description: |-
     One or two sentences. [Link](https://...) 형식의 마크다운 링크 사용 가능.
-  image: "media/news/example.png"   # (선택) static/ 기준 경로
+  image: "media/news/example.png"   # (선택) static/ 기준 경로. 없으면 텍스트만 표시되고 이미지 영역은 생기지 않음
   url: https://...          # (선택) description 안의 [Link] 텍스트가 이 URL로 연결됨
 ```
 
