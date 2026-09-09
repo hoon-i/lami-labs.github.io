@@ -268,7 +268,6 @@ html:not(.dark) #project .project-card {
 /* White cards get a soft warm border so they sit on the off-white page */
 html:not(.dark) .people-card,
 html:not(.dark) .news-card,
-html:not(.dark) .contact-card,
 html:not(.dark) .ra-card {
   border: 1px solid #d9dadc !important;
 }
