@@ -38,47 +38,37 @@
     margin-bottom: 3.4rem;
   }
 
+  /* Same look as the Publications filter buttons */
   .gallery-filter-btn {
     display: inline-block;
-    border: 1px solid rgb(148 163 184 / 0.5);
-    border-radius: 999px;
-    padding: 0.46rem 0.98rem;
-    font-size: 0.9rem;
-    font-weight: 600;
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
     color: #3b3f45;
-    background: rgb(248 250 252 / 0.9);
+    background-color: #f3f4f5;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.2s;
   }
 
   .gallery-filter-btn:hover {
-    border-color: rgb(59 130 246 / 0.7);
+    background-color: #d9dadc;
     color: #1f2125;
-    transform: translateY(-1px);
   }
 
   .gallery-filter-btn.is-active {
-    color: #1f2125;
-    background: #f3f4f5;
-    border-color: #1f2125;
+    background-color: #1f2125;
+    color: #ffffff;
   }
 
-  .dark .gallery-filter-btn {
-    border-color: rgb(148 163 184 / 0.45);
-    color: #d9dadc;
-    background: rgb(30 41 59 / 0.86);
+  .gallery-filter-btn.is-active:hover {
+    background-color: #3b3f45;
   }
 
-  .dark .gallery-filter-btn:hover {
-    border-color: rgb(96 165 250 / 0.75);
-    color: #d9dadc;
-  }
-
-  .dark .gallery-filter-btn.is-active {
-    color: #d9dadc;
-    background: rgb(30 58 138 / 0.45);
-    border-color: rgb(96 165 250 / 0.8);
-  }
+  .dark .gallery-filter-btn { background-color: #3b3f45; color: #d9dadc; }
+  .dark .gallery-filter-btn:hover { background-color: #8b9097; color: #1f2125; }
+  .dark .gallery-filter-btn.is-active { background-color: #d9dadc; color: #1f2125; }
 
   @media (min-width: 640px) {
     .gallery-grid {
@@ -448,7 +438,7 @@
 </style>
 
 <div class="gallery-filters" id="gallery-filters">
-  <button type="button" class="gallery-filter-btn is-active" data-filter="all">ALL</button>
+  <button type="button" class="gallery-filter-btn is-active" data-filter="all">All</button>
   <button type="button" class="gallery-filter-btn" data-filter="group-photos">Group Photos</button>
   <button type="button" class="gallery-filter-btn" data-filter="events">Events</button>
   <button type="button" class="gallery-filter-btn" data-filter="conference">Conference</button>
