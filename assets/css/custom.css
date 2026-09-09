@@ -334,5 +334,5 @@ a.navbar-brand {
 }
 
 /* Home: hero 'Apply →' in white so it stands out on the dark hero */
-section#section-hero a { color: #ffffff !important; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+section#section-hero a { color: #ffffff !important; font-weight: 700; text-decoration: none; }
 section#section-hero a:hover { color: #d9dadc !important; }
