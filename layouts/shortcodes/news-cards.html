@@ -106,23 +106,33 @@
 
   .news-badge {
     color: #ffffff;
+    border: 1px solid transparent;
   }
 
+  /* 4 steps of the palette so each type reads differently */
   .news-badge-publication {
-    background-color: #1f2125;
-  }
-
-  .news-badge-project {
-    background-color: #8b9097;
+    background-color: #1f2125;      /* darkest */
+    color: #ffffff;
   }
 
   .news-badge-events {
-    background-color: #3b3f45;
+    background-color: #8b9097;      /* mid gray */
+    color: #ffffff;
+  }
+
+  .news-badge-project {
+    background-color: #d9dadc;      /* light gray */
+    color: #1f2125;
   }
 
   .news-badge-honor {
-    background-color: #8b9097;
+    background-color: #ffffff;      /* outlined */
+    color: #1f2125;
+    border-color: #8b9097;
   }
+
+  .dark .news-badge-project { background-color: #3b3f45; color: #d9dadc; }
+  .dark .news-badge-honor { background-color: transparent; color: #d9dadc; border-color: #8b9097; }
 
   @media (max-width: 639px) {
     .news-card-row {
