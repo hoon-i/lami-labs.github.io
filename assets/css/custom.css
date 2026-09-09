@@ -46,6 +46,7 @@ section[id="alumni"] .container {
 section[id="pi"] > div[class*="max-w-prose"],
 section[id="postdoc"] > div[class*="max-w-prose"],
 section[id="phd-students"] > div[class*="max-w-prose"],
+section[id="integrated-students"] > div[class*="max-w-prose"],
 section[id="master-students"] > div[class*="max-w-prose"],
 section[id="interns"] > div[class*="max-w-prose"],
 section[id="alumni"] > div[class*="max-w-prose"] {
@@ -61,6 +62,7 @@ section[id="alumni"] > div[class*="max-w-prose"] {
 section[id="pi"] > div > .mb-6,
 section[id="postdoc"] > div > .mb-6,
 section[id="phd-students"] > div > .mb-6,
+section[id="integrated-students"] > div > .mb-6,
 section[id="master-students"] > div > .mb-6,
 section[id="interns"] > div > .mb-6,
 section[id="alumni"] > div > .mb-6 {
