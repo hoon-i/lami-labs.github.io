@@ -40,7 +40,7 @@ sections:
             line-height: 1.7;
             color: #475569;
             background: #f8fafc;
-            border-left: 3px solid #111827;
+            border-left: 3px solid #3b82f6;
             border-radius: 0 0.5rem 0.5rem 0;
             padding: 0.75rem 1rem;
             margin-bottom: 2rem;
@@ -49,8 +49,8 @@ sections:
             background: #1e293b;
             color: #94a3b8;
           }
-          .cal-notice strong { color: #111827; }
-          .dark .cal-notice strong { color: #e5e7eb; }
+          .cal-notice strong { color: #1e3a8a; }
+          .dark .cal-notice strong { color: #93c5fd; }
 
           .cal-section-title {
             font-size: 2rem;

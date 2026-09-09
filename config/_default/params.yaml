@@ -13,7 +13,7 @@ hugoblox:
     mode: system
     pack: "default"
     colors:
-      primary: "neutral"                # 흑백 테마: 무채색 팔레트
+      primary: ""                       # Tailwind palette name or hex (e.g., "indigo" or "#6366f1")
       secondary: ""
       neutral: ""                       # Affects gray utilities (text-gray-*, bg-gray-*)
     colors_light: {}

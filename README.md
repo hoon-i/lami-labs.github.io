@@ -502,7 +502,7 @@ tracks:
 
 - `identity`: 연구실 이름, 로고, 설명 (SEO/OG 태그에 사용)
 - `theme.mode`: `system` / `light` / `dark`
-- `theme.colors.primary`: 주 색상. 현재 `neutral`(무채색)로 설정해 블랙 앤 화이트 테마입니다. 강조색은 `custom.css`의 `--nav-accent`와 각 shortcode의 `#111827` 계열 값입니다.
+- `theme.colors.primary`: 주 색상 (Tailwind 팔레트 이름 또는 hex)
 - `header`: 로고, 정렬, 테마 토글 여부 등
 - `footer`, `copyright`: 하단 문구
 - `analytics.google.measurement_id`: GA4 ID를 넣으면 분석 활성화
@@ -563,7 +563,7 @@ tracks:
 <summary><h2>10. 주의사항 및 알려진 이슈</h2></summary>
 
 - **멤버 사진이 아직 없습니다.** `static/media/authors/<카테고리>/<slug>.jpg`에 사진을 넣으면 카드에 표시됩니다. 사진 없는 멤버의 대체 이미지 `static/media/authors/me.jpg`도 없으니 하나 넣어두는 것을 권장합니다.
-- **로고, 파비콘, 홈 배경이 임시 이미지입니다.** `assets/media/logo.png`와 `static/favicon.png`는 검은 네모에 흰 L, `assets/media/home.png`는 검은 단색입니다. 정식 로고와 히어로 이미지가 생기면 같은 파일명으로 교체하면 됩니다.
+- **로고, 파비콘, 홈 배경이 템플릿 기본 이미지입니다.** `assets/media/logo.png`(파란 네모), `static/favicon.png`, `assets/media/home.png`(남색 단색)을 연구실 이미지로 교체해야 합니다.
 - **교수 YAML의 Google Scholar 링크와 논문별 원문/코드 링크가 비어 있습니다.**
 - **멤버 `category` 값은 shortcode 필터와 정확히 일치해야 합니다.** 6.1의 표를 따르세요.
 - 멤버가 없는 섹션은 숨기지 않고 "Coming soon." 문구를 표시합니다. 문구는 각 `members-*.html`의 `members-empty` 요소에서 바꿀 수 있습니다.
