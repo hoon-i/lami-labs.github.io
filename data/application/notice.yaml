@@ -4,7 +4,7 @@ intro: |
   Please submit the application form below. We will get back to you after reviewing your application.
 
 buttons:
-  - label: "Application Form"
+  - label: "Apply"
     url: "https://forms.gle/AUYdPRmsnc34Cevx7"
     variant: "primary"
     new_tab: true
