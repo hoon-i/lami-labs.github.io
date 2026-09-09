@@ -33,21 +33,21 @@
     cursor: pointer;
     transition: all 0.2s;
     border: none;
-    background-color: #f3f4f6;
-    color: #374151;
+    background-color: #f3f4f5;
+    color: #3b3f45;
   }
   
   .filter-btn:hover {
-    background-color: #e5e7eb;
+    background-color: #d9dadc;
   }
   
   .filter-btn.active {
-    background-color: #2b2b2b;
+    background-color: #1f2125;
     color: white;
   }
   
   .filter-btn.active:hover {
-    background-color: #111111;
+    background-color: #3b3f45;
   }
 
   .publication-card {
@@ -96,8 +96,8 @@
 
   .publication-link-icon:hover {
     transform: translateY(-4px);
-    background: rgba(43, 43, 43, 0.16);
-    border-color: rgba(43, 43, 43, 0.6);
+    background: rgba(31, 33, 37, 0.16);
+    border-color: rgba(31, 33, 37, 0.6);
   }
 
   .publication-link-icon:hover img {
@@ -112,7 +112,7 @@
 
   .dark .publication-link-icon:hover {
     border-color: rgba(147, 197, 253, 0.78);
-    background: rgba(43, 43, 43, 0.42);
+    background: rgba(31, 33, 37, 0.42);
   }
 
   .publication-keywords {
@@ -138,7 +138,7 @@
   }
 
   .publication-category-conference {
-    background-color: #2b2b2b;
+    background-color: #1f2125;
     color: #ffffff;
   }
 
@@ -148,20 +148,20 @@
   }
 
   .publication-category-domestic {
-    background-color: #e5e5e5;
-    color: #2b2b2b;
-    border: 1px solid #e5e5e5;
+    background-color: #d9dadc;
+    color: #1f2125;
+    border: 1px solid #d9dadc;
   }
 
   .publication-category-patent {
-    background-color: #3a3a3a;
+    background-color: #3b3f45;
     color: #ffffff;
   }
 
   .publication-category-preprint {
     background-color: #e7f0ff;
-    color: #3a3a3a;
-    border: 1px solid #e5e5e5;
+    color: #3b3f45;
+    border: 1px solid #d9dadc;
   }
 
   .publication-title {
@@ -210,7 +210,7 @@
   </div>
 
   <!-- Divider below filters -->
-  <div class="mb-6 mt-2" style="border-bottom: 2px solid #2b2b2b;"></div>
+  <div class="mb-6 mt-2" style="border-bottom: 2px solid #1f2125;"></div>
   
   <!-- Publications Grid -->
   <div class="grid grid-cols-1 gap-4" id="publications-grid">
@@ -267,7 +267,7 @@
     {{ if and (ne $year "") (ne $year $prevYear) }}
       {{ if ne $prevYear "" }}
         <!-- Year divider -->
-        <div class="col-span-1 mt-1 mb-1 year-divider" data-year="{{ $year }}" style="border-bottom: 2px solid #2b2b2b;"></div>
+        <div class="col-span-1 mt-1 mb-1 year-divider" data-year="{{ $year }}" style="border-bottom: 2px solid #1f2125;"></div>
       {{ end }}
       <!-- Year header -->
       <div class="col-span-1 mt-1 year-header" data-year="{{ $year }}">

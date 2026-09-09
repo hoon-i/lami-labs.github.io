@@ -24,7 +24,7 @@ sections:
             width: 100%;
             border-radius: 0.75rem;
             overflow: hidden;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #d9dadc;
             margin-bottom: 1.25rem;
           }
 
@@ -38,19 +38,19 @@ sections:
           .cal-notice {
             font-size: 0.92rem;
             line-height: 1.7;
-            color: #475569;
-            background: #f8fafc;
-            border-left: 3px solid #2b2b2b;
+            color: #8b9097;
+            background: #f3f4f5;
+            border-left: 3px solid #1f2125;
             border-radius: 0 0.5rem 0.5rem 0;
             padding: 0.75rem 1rem;
             margin-bottom: 2rem;
           }
           .dark .cal-notice {
-            background: #1e293b;
-            color: #94a3b8;
+            background: #3b3f45;
+            color: #8b9097;
           }
-          .cal-notice strong { color: #2b2b2b; }
-          .dark .cal-notice strong { color: #e5e5e5; }
+          .cal-notice strong { color: #1f2125; }
+          .dark .cal-notice strong { color: #d9dadc; }
 
           .cal-section-title {
             font-size: 2rem;

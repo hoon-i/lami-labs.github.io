@@ -18,33 +18,33 @@ sections:
           .pi-hero { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start; }
           @media (min-width: 820px) { .pi-hero { grid-template-columns: 280px minmax(0, 1fr); gap: 3rem; } }
 
-          .pi-photo { width: 100%; max-width: 280px; aspect-ratio: 3 / 4; border-radius: 0.9rem; overflow: hidden; background: #e5e7eb; box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10); margin: 0 auto; }
-          .dark .pi-photo { background: #334155; }
+          .pi-photo { width: 100%; max-width: 280px; aspect-ratio: 3 / 4; border-radius: 0.9rem; overflow: hidden; background: #d9dadc; box-shadow: 0 10px 24px rgba(31, 33, 37, 0.10); margin: 0 auto; }
+          .dark .pi-photo { background: #3b3f45; }
           .pi-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-          .pi-name { font-size: 2rem; font-weight: 800; margin: 0 0 0.25rem; color: #111827; line-height: 1.2; }
-          .dark .pi-name { color: #f8fafc; }
-          .pi-role { margin: 0 0 1.25rem; color: #2b2b2b; font-weight: 600; font-size: 1rem; }
-          .dark .pi-role { color: #e5e5e5; }
-          .pi-intro p { margin: 0 0 0.9rem; color: #374151; line-height: 1.8; font-size: 1rem; }
-          .dark .pi-intro p { color: #e2e8f0; }
-          .pi-intro a { color: #2b2b2b; font-weight: 600; text-decoration: none; }
+          .pi-name { font-size: 2rem; font-weight: 800; margin: 0 0 0.25rem; color: #1f2125; line-height: 1.2; }
+          .dark .pi-name { color: #f3f4f5; }
+          .pi-role { margin: 0 0 1.25rem; color: #1f2125; font-weight: 600; font-size: 1rem; }
+          .dark .pi-role { color: #d9dadc; }
+          .pi-intro p { margin: 0 0 0.9rem; color: #3b3f45; line-height: 1.8; font-size: 1rem; }
+          .dark .pi-intro p { color: #d9dadc; }
+          .pi-intro a { color: #1f2125; font-weight: 600; text-decoration: none; }
           .pi-intro a:hover { text-decoration: underline; }
-          .dark .pi-intro a { color: #d4d4d4; }
+          .dark .pi-intro a { color: #d9dadc; }
           .pi-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
-          .pi-links a { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.9rem; border-radius: 999px; border: 1px solid #d1d5db; font-size: 0.9rem; font-weight: 600; color: #374151; text-decoration: none; }
-          .pi-links a:hover { border-color: #2b2b2b; color: #2b2b2b; }
-          .dark .pi-links a { border-color: #475569; color: #e2e8f0; }
+          .pi-links a { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.9rem; border-radius: 999px; border: 1px solid #d9dadc; font-size: 0.9rem; font-weight: 600; color: #3b3f45; text-decoration: none; }
+          .pi-links a:hover { border-color: #1f2125; color: #1f2125; }
+          .dark .pi-links a { border-color: #8b9097; color: #d9dadc; }
 
           .pi-sections { display: grid; grid-template-columns: 1fr; gap: 1.5rem 3rem; margin-top: 3rem; }
           @media (min-width: 820px) { .pi-sections { grid-template-columns: 1fr 1fr; } }
-          .pi-section h3 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 2px solid #2b2b2b; color: #111827; }
-          .dark .pi-section h3 { color: #f1f5f9; }
+          .pi-section h3 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 2px solid #1f2125; color: #1f2125; }
+          .dark .pi-section h3 { color: #ffffff; }
           .pi-section ul { list-style: none; margin: 0; padding: 0; }
-          .pi-section li { padding: 0.35rem 0; color: #374151; line-height: 1.6; font-size: 0.97rem; }
-          .dark .pi-section li { color: #e2e8f0; }
-          .pi-section li span { display: inline-block; min-width: 7.5rem; margin-right: 0.5rem; color: #6b7280; font-variant-numeric: tabular-nums; }
-          .dark .pi-section li span { color: #94a3b8; }
+          .pi-section li { padding: 0.35rem 0; color: #3b3f45; line-height: 1.6; font-size: 0.97rem; }
+          .dark .pi-section li { color: #d9dadc; }
+          .pi-section li span { display: inline-block; min-width: 7.5rem; margin-right: 0.5rem; color: #8b9097; font-variant-numeric: tabular-nums; }
+          .dark .pi-section li span { color: #8b9097; }
         </style>
 
         <div class="pi-hero">

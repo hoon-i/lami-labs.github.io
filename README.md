@@ -502,7 +502,17 @@ tracks:
 
 - `identity`: 연구실 이름, 로고, 설명 (SEO/OG 태그에 사용)
 - `theme.mode`: `system` / `light` / `dark`
-- `theme.colors.primary`: 주 색상 (Tailwind 팔레트 이름 또는 hex). 강조색(메뉴 밑줄, 구분선, 버튼, 배지)은 shortcode와 `custom.css`에 차콜 `#2b2b2b` 계열로 직접 지정되어 있습니다.
+- `theme.colors.primary`: 주 색상 (Tailwind 팔레트 이름 또는 hex). 실제 색은 아래 5색 팔레트로 shortcode와 `custom.css`에 직접 지정되어 있습니다.
+
+| 색 | 용도 |
+|---|---|
+| `#1f2125` | 히어로 배경, 제목, 강조(메뉴 밑줄, 구분선, 버튼, 배지), 다크 모드 배경 |
+| `#3b3f45` | 본문 텍스트, hover, 다크 모드 카드 |
+| `#8b9097` | 보조 텍스트(날짜, 설명, 라벨) |
+| `#d9dadc` | 테두리, 배지 배경, 다크 모드 강조 |
+| `#ffffff` | 페이지/카드 배경 |
+
+색을 바꾸려면 위 hex 값을 전체 검색해서 치환하면 됩니다.
 - `header`: 로고, 정렬, 테마 토글 여부 등
 - `footer`, `copyright`: 하단 문구
 - `analytics.google.measurement_id`: GA4 ID를 넣으면 분석 활성화

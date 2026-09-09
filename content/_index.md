@@ -23,7 +23,7 @@ sections:
       # For full-screen, add `min-h-screen` below
       css_class: "dark"
       background:
-        color: "#2b2b2b"
+        color: "#1f2125"
         image:
           # Add your image background to `assets/media/`.
           # filename: bg-triangles.svg
@@ -61,10 +61,10 @@ sections:
       text: |
         <style>
           #intro .max-w-prose, #intro .prose { max-width: 1100px !important; width: 100% !important; }
-          .lab-intro-text { color: #374151; }
-          .dark .lab-intro-text { color: #e2e8f0; }
-          .lab-intro-link { color: #2b2b2b; font-weight: 600; text-decoration: none; }
-          .dark .lab-intro-link { color: #d4d4d4; }
+          .lab-intro-text { color: #3b3f45; }
+          .dark .lab-intro-text { color: #d9dadc; }
+          .lab-intro-link { color: #1f2125; font-weight: 600; text-decoration: none; }
+          .dark .lab-intro-link { color: #d9dadc; }
         </style>
         <div style="max-width: 1100px; margin: 0 auto;">
           <p class="lab-intro-text" style="font-size: 1.1rem; line-height: 1.85; margin: 0 0 0.6rem;">
@@ -88,15 +88,15 @@ sections:
           #research-areas .max-w-prose, #research-areas .prose { max-width: 1100px !important; width: 100% !important; }
           .ra-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; max-width: 1100px; margin: 0 auto; }
           @media (min-width: 860px) { .ra-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-          .ra-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 1rem; padding: 1.75rem 1.6rem; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05); }
-          .dark .ra-card { background: #1e293b; border-color: #334155; }
-          .ra-card h3 { margin: 0 0 0.6rem; font-size: 1.15rem; font-weight: 700; color: #111827; }
-          .dark .ra-card h3 { color: #f1f5f9; }
-          .ra-card p { margin: 0; color: #4b5563; line-height: 1.7; font-size: 0.98rem; }
-          .dark .ra-card p { color: #cbd5e1; }
+          .ra-card { background: #ffffff; border: 1px solid #d9dadc; border-radius: 1rem; padding: 1.75rem 1.6rem; box-shadow: 0 8px 20px rgba(31, 33, 37, 0.05); }
+          .dark .ra-card { background: #3b3f45; border-color: #3b3f45; }
+          .ra-card h3 { margin: 0 0 0.6rem; font-size: 1.15rem; font-weight: 700; color: #1f2125; }
+          .dark .ra-card h3 { color: #ffffff; }
+          .ra-card p { margin: 0; color: #3b3f45; line-height: 1.7; font-size: 0.98rem; }
+          .dark .ra-card p { color: #d9dadc; }
         </style>
         <h2 style="text-align: center; margin-bottom: 0.5rem; font-size: 2rem; font-weight: 700;">Building Smarter, More Reliable AI Agents</h2>
-        <p style="text-align: center; color: #6b7280; margin: 0 auto 2rem; max-width: 720px;">Our research group is committed to building AI agents that are practical and trustworthy.</p>
+        <p style="text-align: center; color: #8b9097; margin: 0 auto 2rem; max-width: 720px;">Our research group is committed to building AI agents that are practical and trustworthy.</p>
         <div class="ra-grid">
           <div class="ra-card">
             <h3>Advancing LLM Capabilities</h3>
