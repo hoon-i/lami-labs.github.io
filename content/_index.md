@@ -23,7 +23,7 @@ sections:
       # For full-screen, add `min-h-screen` below
       css_class: "dark"
       background:
-        color: "#0b1220"
+        color: "#2b2b2b"
         image:
           # Add your image background to `assets/media/`.
           # filename: bg-triangles.svg

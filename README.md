@@ -517,7 +517,7 @@ tracks:
 
 ### `assets/css/custom.css`
 
-전역 CSS 오버라이드. Hugo Blox 기본 컨테이너 폭 제한을 풀거나, 드롭다운 메뉴 간격을 다른 메뉴와 맞추는 등의 조정이 들어 있습니다. 라이트 모드 배경색은 상단의 `--page-bg`(본문, 따뜻한 오프화이트)와 `--header-bg`(헤더/푸터) 변수로 바꿉니다. 히어로 배경은 `assets/media/home.png`(남색 그라데이션)와 `content/_index.md`의 `background.color`입니다. shortcode 파일 안에도 `<style>` 블록이 있으니, 특정 컴포넌트 스타일은 해당 shortcode를 먼저 확인하세요.
+전역 CSS 오버라이드. Hugo Blox 기본 컨테이너 폭 제한을 풀거나, 드롭다운 메뉴 간격을 다른 메뉴와 맞추는 등의 조정이 들어 있습니다. 라이트 모드 배경색은 상단의 `--page-bg`(본문, 흰색)와 `--header-bg`(헤더/푸터) 변수로 바꿉니다. 히어로 배경은 `assets/media/home.png`(차콜 비네트)와 `content/_index.md`의 `background.color`입니다. shortcode 파일 안에도 `<style>` 블록이 있으니, 특정 컴포넌트 스타일은 해당 shortcode를 먼저 확인하세요.
 
 </details>
 

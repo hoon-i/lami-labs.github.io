@@ -150,7 +150,7 @@ section#section-hero > .home-section-bg.bg-image {
   position: absolute !important;
   inset: 0;
   filter: none !important;
-  background-color: rgba(0, 0, 0, 0.70) !important;
+  background-color: rgba(0, 0, 0, 0.12) !important;
   background-blend-mode: multiply !important;
 }
 
@@ -228,10 +228,10 @@ section#section-hero > .home-section-bg.bg-image {
   color: var(--nav-accent)  !important;
 }
 
-/* Light mode surface tuning: warm off-white page background (원본 테마의 차가운 회색과 차별화) */
+/* Light mode surface tuning: white page + charcoal hero (원본 테마의 회색 배경과 차별화) */
 :root {
-  --page-bg: #f6f4ef;      /* 본문/섹션 배경 */
-  --header-bg: #fbfaf7;    /* 헤더/푸터 배경 */
+  --page-bg: #ffffff;      /* 본문/섹션 배경 */
+  --header-bg: #ffffff;    /* 헤더/푸터 배경 */
 }
 html:not(.dark) body,
 html:not(.dark) main {
@@ -259,7 +259,7 @@ html:not(.dark) .people-card,
 html:not(.dark) .news-card,
 html:not(.dark) .contact-card,
 html:not(.dark) .ra-card {
-  border: 1px solid #e8e4dc !important;
+  border: 1px solid #e5e7eb !important;
 }
 
 /* Global dark mode surface tuning: gray section background + translucent navy cards */
