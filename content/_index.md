@@ -63,8 +63,9 @@ sections:
           #intro .max-w-prose, #intro .prose { max-width: 1100px !important; width: 100% !important; }
           .lab-intro-text { color: #3b3f45; }
           .dark .lab-intro-text { color: #d9dadc; }
-          .lab-intro-link { color: #a6b5cd; font-weight: 600; text-decoration: none; }
-          .dark .lab-intro-link { color: #a6b5cd; }
+          .lab-intro-link { color: #1f2125; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+          .lab-intro-link:hover { color: #3b3f45; }
+          .dark .lab-intro-link { color: #ffffff; }
         </style>
         <div style="max-width: 1100px; margin: 0 auto;">
           <p class="lab-intro-text" style="font-size: 1.1rem; line-height: 1.85; margin: 0 0 0.6rem;">

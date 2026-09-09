@@ -333,6 +333,6 @@ a.navbar-brand {
   }
 }
 
-/* Home: hero 'Apply →' and intro 'Join us →' share the same accent */
-section#section-hero a { color: #a6b5cd !important; }
-.lab-intro-link:hover, section#section-hero a:hover { color: #c5d0e2 !important; }
+/* Home: hero 'Apply →' in white so it stands out on the dark hero */
+section#section-hero a { color: #ffffff !important; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+section#section-hero a:hover { color: #d9dadc !important; }
