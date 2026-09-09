@@ -172,12 +172,13 @@
     border: 1px dashed #8b9097;
   }
 
-  /* Dark mode: keep the types distinguishable on #1f2125 */
-  .dark .publication-category-conference { background-color: #8b9097 !important; color: #1f2125 !important; border-color: #8b9097 !important; }
-  .dark .publication-category-journal { background-color: #3b3f45 !important; color: #d9dadc !important; border-color: #8b9097 !important; }
-  .dark .publication-category-domestic { background-color: transparent !important; color: #d9dadc !important; border-color: #8b9097 !important; }
-  .dark .publication-category-patent { background-color: #d9dadc !important; color: #1f2125 !important; border-color: #d9dadc !important; }
-  .dark .publication-category-preprint { background-color: transparent !important; color: #8b9097 !important; border: 1px dashed #8b9097 !important; }
+  /* Dark mode: white text on every badge, backgrounds still differ per type */
+  .dark .publication-category-badge { color: #ffffff !important; }
+  .dark .publication-category-conference { background-color: #8b9097 !important; border-color: #8b9097 !important; }
+  .dark .publication-category-journal { background-color: #3b3f45 !important; border-color: #8b9097 !important; }
+  .dark .publication-category-domestic { background-color: transparent !important; border-color: #8b9097 !important; }
+  .dark .publication-category-patent { background-color: #1f2125 !important; border-color: #d9dadc !important; }
+  .dark .publication-category-preprint { background-color: transparent !important; border: 1px dashed #8b9097 !important; }
 
   .publication-title {
     padding-right: 7.2rem;
