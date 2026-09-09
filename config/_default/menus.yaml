@@ -6,39 +6,26 @@ main:
   - name: Home
     url: /
     weight: 10
-  # - name: Features
-  #   url: /#features
-  #   weight: 20
-  # - name: Solutions
-  #   url: /#solutions
-  #   weight: 30
   - name: Members
-    url: /members/
-    weight: 35
-  - name: Research
-    url: /research/
-    weight: 36
-  - name: Publications
-    url: /publications/
-    weight: 37
-  - name: Project
-    url: /project/
-    weight: 38
+    weight: 20
+    hasChildren: true
+  - parent: Members
+    name: Professor
+    url: /members/professor/
+    weight: 1
+  - parent: Members
+    name: Students
+    url: /members/students/
+    weight: 2
   - name: News
     url: /news/
-    weight: 39
+    weight: 30
+  - name: Publications
+    url: /publications/
+    weight: 40
   - name: Gallery
     url: /gallery/
-    weight: 40
-  - name: Info
-    url: /info/
-    weight: 41
-  - name: Join Us
-    url: /application/
-    weight: 42
-  # - name: Resources
-  #   weight: 40
-  #   hasChildren: true
-  # - parent: Resources
-  #   name: Blog
-  #   url: blog/
+    weight: 50
+  - name: Contact
+    url: /contact/
+    weight: 60

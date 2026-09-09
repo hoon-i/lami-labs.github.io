@@ -285,3 +285,15 @@ a.navbar-brand {
 #section-hero .hero-s { color: #626c75; }
 #section-hero .hero-l { color: #df4c39; }
 */
+
+/* 드롭다운 메뉴(Members)도 다른 메뉴와 동일한 간격 유지 (Tailwind space-x 값과 맞춤) */
+@media (min-width: 1024px) {
+  #site-header #nav-menu > li.nav-dropdown:not(:last-child) {
+    margin-inline-end: 0.5rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  #site-header #nav-menu > li.nav-dropdown:not(:last-child) {
+    margin-inline-end: 2rem !important;
+  }
+}

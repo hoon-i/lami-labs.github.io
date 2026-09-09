@@ -3,10 +3,10 @@ hugoblox:
   identity:
     name: ""
     logo: "media/logo.png"
-    organization: "Lab Name"
+    organization: "LaMI Lab"
     type: person                        # person | organization | local_business
     tagline: ""
-    description: "Lab description"
+    description: "Language-driven Multimodal Intelligence Lab"
     social:
       twitter: ""                        # Twitter/X handle for Twitter Cards (without @)
   theme:

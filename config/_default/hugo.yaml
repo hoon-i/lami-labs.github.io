@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name (set in params.yaml under hugoblox.branding.name)
-title: 'Lab Name'
+title: 'LaMI Lab'
 baseURL: 'https://USERNAME.github.io/' # Website URL
 # googleAnalytics: G-XXXXXXXXXX
 
@@ -91,5 +91,7 @@ markup:
       unsafe: true
 security:
   _merge: deep
+  exec:
+    allow: ['^(dart-sass|dart-sass-embedded|go|git|npx|node|postcss|tailwindcss)$']
 sitemap:
   _merge: deep
