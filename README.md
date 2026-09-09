@@ -502,7 +502,7 @@ tracks:
 
 - `identity`: 연구실 이름, 로고, 설명 (SEO/OG 태그에 사용)
 - `theme.mode`: `system` / `light` / `dark`
-- `theme.colors.primary`: 주 색상 (Tailwind 팔레트 이름 또는 hex)
+- `theme.colors.primary`: 주 색상 (Tailwind 팔레트 이름 또는 hex). 강조색(메뉴 밑줄, 구분선, 버튼, 배지)은 shortcode와 `custom.css`에 차콜 `#2b2b2b` 계열로 직접 지정되어 있습니다.
 - `header`: 로고, 정렬, 테마 토글 여부 등
 - `footer`, `copyright`: 하단 문구
 - `analytics.google.measurement_id`: GA4 ID를 넣으면 분석 활성화

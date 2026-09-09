@@ -21,7 +21,7 @@
   }
 
   .research-section-divider {
-    border-bottom: 2px solid #3b82f6;
+    border-bottom: 2px solid #2b2b2b;
     margin-top: 0.55rem;
     margin-bottom: 1rem;
   }
@@ -31,11 +31,11 @@
   }
 
   .research-badge-intelligent {
-    background-color: #f97316;
+    background-color: #525252;
   }
 
   .research-badge-physical {
-    background-color: #14b8a6;
+    background-color: #2b2b2b;
   }
 
   .research-badge-etc {
@@ -387,13 +387,13 @@
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 999px;
-    border: 1px solid #bfdbfe;
+    border: 1px solid #e5e5e5;
     background: #ffffff;
-    color: #1d4ed8;
+    color: #2b2b2b;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.16);
+    box-shadow: 0 8px 20px rgba(17, 17, 17, 0.16);
     cursor: pointer;
     z-index: 2;
     padding: 0;
@@ -401,7 +401,7 @@
   }
 
   .research-carousel-nav:hover {
-    background: #eff6ff;
+    background: #f7f7f7;
     transform: translateY(-50%) scale(1.03);
   }
 
@@ -449,14 +449,14 @@
   }
 
   .research-carousel-dot.is-active {
-    background: #2563eb;
+    background: #111111;
     opacity: 1;
   }
 
   .dark .research-carousel-nav {
     background: #111827;
-    border-color: #3b82f6;
-    color: #93c5fd;
+    border-color: #2b2b2b;
+    color: #e5e5e5;
   }
 
   .dark .research-carousel-nav:hover {
@@ -468,7 +468,7 @@
   }
 
   .dark .research-carousel-dot.is-active {
-    background: #60a5fa;
+    background: #d4d4d4;
   }
 
   @media (max-width: 768px) {
@@ -704,7 +704,7 @@
         <p class="text-sm text-gray-700 dark:text-gray-300" style="margin-bottom: 0.5rem;">{{ .description }}</p>
         {{ if .url }}
           <div class="mt-2">
-            <a href="{{ .url }}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 dark:bg-blue-500 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors shadow-sm hover:shadow-md">
+            <a href="{{ .url }}" class="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-colors shadow-sm hover:shadow-md" style="background:#2b2b2b;color:#fff;">
               Read more
               <svg class="w-4 h-4 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>

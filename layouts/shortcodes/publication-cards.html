@@ -42,12 +42,12 @@
   }
   
   .filter-btn.active {
-    background-color: #3b82f6;
+    background-color: #2b2b2b;
     color: white;
   }
   
   .filter-btn.active:hover {
-    background-color: #2563eb;
+    background-color: #111111;
   }
 
   .publication-card {
@@ -96,8 +96,8 @@
 
   .publication-link-icon:hover {
     transform: translateY(-4px);
-    background: rgba(59, 130, 246, 0.16);
-    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(43, 43, 43, 0.16);
+    border-color: rgba(43, 43, 43, 0.6);
   }
 
   .publication-link-icon:hover img {
@@ -112,7 +112,7 @@
 
   .dark .publication-link-icon:hover {
     border-color: rgba(147, 197, 253, 0.78);
-    background: rgba(59, 130, 246, 0.42);
+    background: rgba(43, 43, 43, 0.42);
   }
 
   .publication-keywords {
@@ -138,7 +138,7 @@
   }
 
   .publication-category-conference {
-    background-color: #3b82f6;
+    background-color: #2b2b2b;
     color: #ffffff;
   }
 
@@ -148,20 +148,20 @@
   }
 
   .publication-category-domestic {
-    background-color: #bfdbfe;
-    color: #1e3a8a;
-    border: 1px solid #93c5fd;
+    background-color: #e5e5e5;
+    color: #2b2b2b;
+    border: 1px solid #e5e5e5;
   }
 
   .publication-category-patent {
-    background-color: #1e40af;
+    background-color: #3a3a3a;
     color: #ffffff;
   }
 
   .publication-category-preprint {
     background-color: #e7f0ff;
-    color: #1e40af;
-    border: 1px solid #bfdbfe;
+    color: #3a3a3a;
+    border: 1px solid #e5e5e5;
   }
 
   .publication-title {
@@ -192,7 +192,7 @@
       type="text" 
       id="publication-search" 
       placeholder="Search publications..." 
-      class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500"
       style="font-size: 1rem;"
     >
   </div>
@@ -210,7 +210,7 @@
   </div>
 
   <!-- Divider below filters -->
-  <div class="mb-6 mt-2" style="border-bottom: 2px solid #3b82f6;"></div>
+  <div class="mb-6 mt-2" style="border-bottom: 2px solid #2b2b2b;"></div>
   
   <!-- Publications Grid -->
   <div class="grid grid-cols-1 gap-4" id="publications-grid">
@@ -267,7 +267,7 @@
     {{ if and (ne $year "") (ne $year $prevYear) }}
       {{ if ne $prevYear "" }}
         <!-- Year divider -->
-        <div class="col-span-1 mt-1 mb-1 year-divider" data-year="{{ $year }}" style="border-bottom: 2px solid #3b82f6;"></div>
+        <div class="col-span-1 mt-1 mb-1 year-divider" data-year="{{ $year }}" style="border-bottom: 2px solid #2b2b2b;"></div>
       {{ end }}
       <!-- Year header -->
       <div class="col-span-1 mt-1 year-header" data-year="{{ $year }}">
@@ -297,13 +297,13 @@
       {{ end }}
       {{ if $item.venue }}
         <div class="publication-venue">
-          <span class="text-sm font-bold text-blue-700 dark:text-blue-300">
+          <span class="text-sm font-bold text-gray-800 dark:text-gray-200">
             {{ $item.venue }}{{ if $item.date }} ({{ $item.date | time.Format "2006" }}){{ end }}
           </span>
         </div>
       {{ else if $item.date }}
         <div class="publication-venue">
-          <span class="text-sm font-bold text-blue-700 dark:text-blue-300">
+          <span class="text-sm font-bold text-gray-800 dark:text-gray-200">
             {{ $item.date | time.Format "2006" }}
           </span>
         </div>
@@ -311,17 +311,17 @@
       {{ if $hasKeywords }}
         <div class="publication-keywords">
           {{ if $item.task }}
-            <span class="inline-block px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/30 rounded-md">
+            <span class="inline-block px-3 py-1 text-xs font-medium text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 rounded-md">
               {{ $item.task }}
             </span>
           {{ end }}
           {{ if $item.method }}
-            <span class="inline-block px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/30 rounded-md">
+            <span class="inline-block px-3 py-1 text-xs font-medium text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 rounded-md">
               {{ $item.method }}
             </span>
           {{ end }}
           {{ if $item.domain }}
-            <span class="inline-block px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/30 rounded-md">
+            <span class="inline-block px-3 py-1 text-xs font-medium text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 rounded-md">
               {{ $item.domain }}
             </span>
           {{ end }}

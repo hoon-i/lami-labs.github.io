@@ -8,9 +8,6 @@ buttons:
     url: "https://forms.gle/AUYdPRmsnc34Cevx7"
     variant: "primary"
     new_tab: true
-  - label: "Contact"
-    url: "/contact/"
-    variant: "secondary"
 
 tracks:
   - title: "Undergraduate Intern"

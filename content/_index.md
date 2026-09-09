@@ -63,8 +63,8 @@ sections:
           #intro .max-w-prose, #intro .prose { max-width: 1100px !important; width: 100% !important; }
           .lab-intro-text { color: #374151; }
           .dark .lab-intro-text { color: #e2e8f0; }
-          .lab-intro-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
-          .dark .lab-intro-link { color: #60a5fa; }
+          .lab-intro-link { color: #2b2b2b; font-weight: 600; text-decoration: none; }
+          .dark .lab-intro-link { color: #d4d4d4; }
         </style>
         <div style="max-width: 1100px; margin: 0 auto;">
           <p class="lab-intro-text" style="font-size: 1.1rem; line-height: 1.85; margin: 0 0 0.6rem;">
