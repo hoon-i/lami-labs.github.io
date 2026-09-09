@@ -213,7 +213,9 @@ lami-labs.github.io/
 
 ### Members > Professor (`content/members/professor/_index.md`)
 
-- 교수 카드 아래 `id: pi-profile` 블록에 소개, 학력, 경력, 학술 활동이 HTML로 직접 작성되어 있습니다. 경력이 바뀌면 여기를 수정하세요.
+- 이 페이지는 멤버 카드 shortcode를 쓰지 않고 `id: pi` 블록의 HTML로 직접 구성되어 있습니다. 왼쪽 사진, 오른쪽 소개글, 아래에 Education / Professional Experience / Academic Service / Invited Talks 4개 섹션입니다.
+- 사진은 `static/media/authors/professor/jisoo-mok.jpg`를 읽습니다. 소개글, CV 링크, 경력이 바뀌면 이 파일의 HTML을 수정하세요.
+- 교수 YAML(`data/authors/professor/jisoo-mok.yaml`)은 전체 Members 페이지(`/members/`)에서만 쓰입니다.
 
 ### Contact (`content/contact/_index.md`)
 
