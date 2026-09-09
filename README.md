@@ -107,7 +107,7 @@ lami-labs.github.io/
 ├── content/                       # 페이지 뼈대 (각 페이지에 어떤 섹션을 넣을지)
 │   ├── _index.md                  #   홈
 │   ├── members/_index.md          #   Members (전체 목록, 메뉴에는 없음)
-│   ├── members/professor/_index.md #  Members > Professor (교수 카드 + 소개/학력/경력, 포닥)
+│   ├── members/professor/_index.md #  Members > Professor (교수 사진 + 소개/학력/경력)
 │   ├── members/students/_index.md #   Members > Students (박사, 석박통합, 석사, 인턴)
 │   ├── members/alumni/_index.md   #   Members > Alumni (졸업생)
 │   ├── news/_index.md             #   News
@@ -193,7 +193,7 @@ lami-labs.github.io/
 | 페이지 | URL | content 파일 | 데이터 소스 | 이미지 위치 |
 |---|---|---|---|---|
 | Home | `/` | `content/_index.md` | `data/news/news.yaml` | `assets/media/home.png` (배경) |
-| Members > Professor | `/members/professor/` | `content/members/professor/_index.md` | `data/authors/**/*.yaml` (PI, Postdoc) | `static/media/authors/<카테고리>/` |
+| Members > Professor | `/members/professor/` | `content/members/professor/_index.md` | 페이지 파일 안 HTML | `static/media/authors/<카테고리>/` |
 | Members > Students | `/members/students/` | `content/members/students/_index.md` | `data/authors/**/*.yaml` (PhD, Integrated, Master, Interns) |
 | Members > Alumni | `/members/alumni/` | `content/members/alumni/_index.md` | `data/authors/Alumni/*.yaml` | 없음 | `static/media/authors/<카테고리>/` |
 | Members (전체) | `/members/` | `content/members/_index.md` | 위 전체 | 메뉴에 노출되지 않음 |
@@ -247,7 +247,7 @@ lami-labs.github.io/
 | category 값 | 표시 페이지 / 섹션 | 사진 폴더 (`static/media/authors/`) |
 |---|---|---|
 | `PI` | Professor 페이지 / Professor | `professor/` |
-| `Postdoc` | Professor 페이지 / Post Doc | `postdoc/` |
+| `Postdoc` | (현재 어느 페이지에도 표시 안 함) | `postdoc/` |
 | `PhD Students` | Students 페이지 / Ph.D. Students | `phd/` |
 | `Integrated Students` | Students 페이지 / Integrated M.S./Ph.D. Students | `integrated/` |
 | `Master Students` | Students 페이지 / M.S. Students | `master/` |

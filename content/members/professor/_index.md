@@ -100,16 +100,4 @@ sections:
       spacing:
         padding: ["4.25rem", 0, "3rem", 0]
 
-  - block: markdown
-    id: postdoc
-    content:
-      title: Post Doc
-      text: |
-        <div class="members-section-divider"></div>
-        {{< members-postdoc >}}
-    design:
-      spacing:
-        padding: ["2rem", 0, "2rem", 0]
-      css_style: "max-width: 100% !important; width: 100% !important;"
-      container: false
 ---
