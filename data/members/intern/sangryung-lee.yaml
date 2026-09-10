@@ -8,7 +8,7 @@ name:
   given: Sangryung
   family: Lee
 role: |-                      # 여러 줄 가능. 둘째 줄에 출신 학교
-  Undergraduate Intern
+  Intern
   Sogang University
 tags:
   - LLM Uncertainty
