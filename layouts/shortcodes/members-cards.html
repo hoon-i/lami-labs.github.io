@@ -1,6 +1,6 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
   {{ $allAuthors := slice }}
-  {{ range $k, $v := site.Data.authors }}
+  {{ range $k, $v := site.Data.members }}
     {{ if isset $v "slug" }}
       {{ $allAuthors = $allAuthors | append $v }}
     {{ else }}

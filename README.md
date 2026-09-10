@@ -194,8 +194,8 @@ lami-labs.github.io/
 |---|---|---|---|---|
 | Home | `/` | `content/_index.md` | `data/news/news.yaml` | `assets/media/home.png` (배경) |
 | Members > Professor | `/members/professor/` | `content/members/professor/_index.md` | 페이지 파일 안 HTML | `static/media/members/<카테고리>/` |
-| Members > Students | `/members/students/` | `content/members/students/_index.md` | `data/authors/**/*.yaml` (PhD, Integrated, Master, Interns) |
-| Members > Alumni | `/members/alumni/` | `content/members/alumni/_index.md` | `data/authors/Alumni/*.yaml` | 없음 | `static/media/members/<카테고리>/` |
+| Members > Students | `/members/students/` | `content/members/students/_index.md` | `data/members/**/*.yaml` (PhD, Integrated, Master, Interns) |
+| Members > Alumni | `/members/alumni/` | `content/members/alumni/_index.md` | `data/members/Alumni/*.yaml` | 없음 | `static/media/members/<카테고리>/` |
 | Members (전체) | `/members/` | `content/members/_index.md` | 위 전체 | 메뉴에 노출되지 않음 |
 | News | `/news/` | `content/news/_index.md` | `data/news/news.yaml` | `static/media/news/` |
 | Publications | `/publications/` | `content/publications/_index.md` | `data/publications/publications.yaml` | 없음 (아이콘만) |
@@ -218,7 +218,7 @@ lami-labs.github.io/
 
 - 이 페이지는 멤버 카드 shortcode를 쓰지 않고 `id: pi` 블록의 HTML로 직접 구성되어 있습니다. 왼쪽 사진, 오른쪽 소개글, 아래에 Education / Professional Experience / Academic Service / Invited Talks 4개 섹션입니다.
 - 사진은 `static/media/members/professor/jisoo-mok.jpg`를 읽습니다. 소개글, CV 링크, 경력이 바뀌면 이 파일의 HTML을 수정하세요.
-- 교수 YAML(`data/authors/professor/jisoo-mok.yaml`)은 전체 Members 페이지(`/members/`)에서만 쓰입니다.
+- 교수 YAML(`data/members/professor/jisoo-mok.yaml`)은 전체 Members 페이지(`/members/`)에서만 쓰입니다.
 
 ### Contact (`content/contact/_index.md`)
 
@@ -238,7 +238,7 @@ lami-labs.github.io/
 
 > 각 YAML 파일 상단에 주석으로 예시가 들어 있습니다. `docs/examples/`에도 예시 파일이 있습니다.
 
-### 6.1 멤버 — `data/authors/<카테고리폴더>/<slug>.yaml`
+### 6.1 멤버 — `data/members/<카테고리폴더>/<slug>.yaml`
 
 **멤버 한 명당 YAML 파일 하나**입니다. 폴더는 정리용이며, 실제 분류는 파일 안의 `category` 값으로 결정됩니다.
 
@@ -254,10 +254,10 @@ lami-labs.github.io/
 | `Interns` | Students 페이지 / Interns | `intern/` |
 | `Alumni` | Alumni 페이지 | (사진 없음) |
 
-> Alumni는 예외적으로 **폴더 이름이 `Alumni`인 것**을 기준으로 수집합니다. 반드시 `data/authors/Alumni/` 안에 두세요.
+> Alumni는 예외적으로 **폴더 이름이 `Alumni`인 것**을 기준으로 수집합니다. 반드시 `data/members/Alumni/` 안에 두세요.
 > `docs/examples/`의 예시 파일에는 `Post Doc`, `Undergraduate Students` 같은 값이 적혀 있는데, 실제 shortcode는 위 표의 값만 인식합니다.
 
-일반 멤버 예시 (`data/authors/intern/jaehoon-jang.yaml`):
+일반 멤버 예시 (`data/members/intern/jaehoon-jang.yaml`):
 
 ```yaml
 schema: hugoblox/author/v1
@@ -295,9 +295,9 @@ links:                      # 아이콘 링크 줄. 없으면 표시되지 않�
 
 `links[].icon`에 지원되는 값: `at-symbol`, `brands/github`, `brands/linkedin`, `academicons/google-scholar`, `homepage` (또는 `brands/x`). `url`을 비워두면 아이콘이 비활성 상태로 표시됩니다.
 
-교수 예시 (`data/authors/professor/jisoo-mok.yaml`): 위와 동일하되 `is_owner: true`, `category: PI`, `role: Assistant Professor`. 추가로 `bio`, `affiliations` 필드를 넣을 수 있습니다.
+교수 예시 (`data/members/professor/jisoo-mok.yaml`): 위와 동일하되 `is_owner: true`, `category: PI`, `role: Assistant Professor`. 추가로 `bio`, `affiliations` 필드를 넣을 수 있습니다.
 
-Alumni 예시 (`data/authors/Alumni/<slug>.yaml`):
+Alumni 예시 (`data/members/Alumni/<slug>.yaml`):
 
 ```yaml
 schema: hugoblox/author/v1
@@ -535,12 +535,12 @@ tracks:
 <summary><h2>9. 자주 하는 작업 체크리스트</h2></summary>
 
 **새 멤버 추가**
-1. `data/authors/<카테고리폴더>/<slug>.yaml` 생성 (6.1 참고)
+1. `data/members/<카테고리폴더>/<slug>.yaml` 생성 (6.1 참고)
 2. 사진을 `static/media/members/<카테고리폴더>/<slug>.jpg`로 저장
 3. `order` 값으로 순서 조정
 
 **멤버 졸업 처리**
-1. 기존 YAML을 `data/authors/Alumni/`로 이동
+1. 기존 YAML을 `data/members/Alumni/`로 이동
 2. `category: Alumni`로 바꾸고 `course`, `next`, `graduated` 추가
 3. 불필요한 `links`, `tags` 등은 제거해도 됨 (Alumni 카드는 표시하지 않음)
 
