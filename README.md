@@ -174,7 +174,7 @@ lami-labs.github.io/
 │   ├── favicon.png
 │   └── media/
 │       ├── icon/*.svg             #   연락처/논문 링크용 아이콘
-│       ├── authors/               #   멤버 사진 (카테고리별 하위 폴더)
+│       ├── members/               #   멤버 사진 (<slug>.jpg, hover용은 hidden/)
 │       ├── research/              #   연구 주제 이미지
 │       ├── news/                  #   뉴스 이미지
 │       ├── gallery/<앨범폴더>/     #   갤러리 사진
