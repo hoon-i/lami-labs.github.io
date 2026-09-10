@@ -1,7 +1,7 @@
 # Rename to <slug>.yaml to activate. # Example undergraduate student. Copy, rename, uncomment. Categories used by the site:
 # "PI", "Post Doc", "Undergraduate Students", "Master Students", "Undergraduate Students", "Alumni"
 #schema: hugoblox/author/v1
-#slug: example-undergrad
+#slug: example-intern
 #is_owner: false
 #category: Undergraduate Students
 #order: 1
@@ -13,7 +13,7 @@
 #  M.S./Ph.D. Integrated
 #tags:
 #  - Research Area
-#hidden_image: example-undergrad.jpg
+#hidden_image: example-intern.jpg
 #links:
 #  - icon: at-symbol
 #    url: mailto:name@example.edu

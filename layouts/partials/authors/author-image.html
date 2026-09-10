@@ -1,5 +1,5 @@
 {{- $a := . -}}
-{{- $folder := "undergrad" -}}
+{{- $folder := "intern" -}}
 {{- if eq $a.category "PI" -}}
   {{- $folder = "professor" -}}
 {{- else if eq $a.category "Postdoc" -}}
@@ -11,7 +11,7 @@
 {{- else if eq $a.category "Master Students" -}}
   {{- $folder = "master" -}}
 {{- else if or (eq $a.category "Interns") (eq $a.category "Undergraduate Students") -}}
-  {{- $folder = "undergrad" -}}
+  {{- $folder = "intern" -}}
 {{- else if eq $a.category "Alumni" -}}
   {{- $folder = "Alumni" -}}
 {{- end -}}

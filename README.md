@@ -121,7 +121,7 @@ lami-labs.github.io/
 │
 ├── data/                          # ★ 실제 콘텐츠 데이터 (가장 자주 수정)
 │   ├── authors/                   #   멤버 (카테고리별 폴더, 한 명당 YAML 하나)
-│   │   ├── professor/  postdoc/  phd/  integrated/  master/  undergrad/  Alumni/
+│   │   ├── professor/  postdoc/  phd/  integrated/  master/  intern/  Alumni/
 │   ├── research/                  #   연구 주제 (Research 페이지용, 현재 비어 있음)
 │   ├── publications/publications.yaml
 │   ├── project/projects.yaml
@@ -251,13 +251,13 @@ lami-labs.github.io/
 | `PhD Students` | Students 페이지 / Ph.D. Students | `phd/` |
 | `Integrated Students` | Students 페이지 / Integrated M.S./Ph.D. Students | `integrated/` |
 | `Master Students` | Students 페이지 / M.S. Students | `master/` |
-| `Interns` | Students 페이지 / Interns | `undergrad/` |
+| `Interns` | Students 페이지 / Interns | `intern/` |
 | `Alumni` | Alumni 페이지 | (사진 없음) |
 
 > Alumni는 예외적으로 **폴더 이름이 `Alumni`인 것**을 기준으로 수집합니다. 반드시 `data/authors/Alumni/` 안에 두세요.
 > `docs/examples/`의 예시 파일에는 `Post Doc`, `Undergraduate Students` 같은 값이 적혀 있는데, 실제 shortcode는 위 표의 값만 인식합니다.
 
-일반 멤버 예시 (`data/authors/undergrad/jaehoon-jang.yaml`):
+일반 멤버 예시 (`data/authors/intern/jaehoon-jang.yaml`):
 
 ```yaml
 schema: hugoblox/author/v1
@@ -475,7 +475,7 @@ tracks:
 | 헤더 로고 | `assets/media/logo.png` | `params.yaml`의 `identity.logo`, `header.logo`에서 참조 |
 | 홈 히어로 배경 | `assets/media/home.png` | `content/_index.md`의 `background.image.filename` |
 | 파비콘 | `static/favicon.png` | JS로 강제 교체하므로 이 파일만 바꾸면 됨 |
-| 멤버 사진 | `static/media/members/{professor,postdoc,phd,integrated,master,undergrad}/<slug>.jpg` | 3:4 비율 권장 |
+| 멤버 사진 | `static/media/members/{professor,postdoc,phd,integrated,master,intern}/<slug>.jpg` | 3:4 비율 권장 |
 | 멤버 hover 사진 | `static/media/members/hidden/<파일명>` | YAML의 `hidden_image` |
 | 멤버 기본 사진 | `static/media/members/me.jpg` | 사진 없을 때 대체 이미지 (현재 없음, 추가 권장) |
 | 연구 주제 이미지 | `static/media/research/` | jpg/png/gif |
