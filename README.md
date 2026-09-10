@@ -120,7 +120,7 @@ lami-labs.github.io/
 │   └── calendar/_index.md         #   Calendar (메뉴에는 없음)
 │
 ├── data/                          # ★ 실제 콘텐츠 데이터 (가장 자주 수정)
-│   ├── authors/                   #   멤버 (카테고리별 폴더, 한 명당 YAML 하나)
+│   ├── members/                   #   멤버 (과정별 폴더, 한 명당 YAML 하나)
 │   │   ├── professor/  postdoc/  phd/  integrated/  master/  intern/  Alumni/
 │   ├── research/                  #   연구 주제 (Research 페이지용, 현재 비어 있음)
 │   ├── publications/publications.yaml
