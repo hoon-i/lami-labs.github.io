@@ -1,5 +1,5 @@
 schema: hugoblox/author/v1
-slug: geontae-kim                 # 사진: static/media/members/intern/geontae-kim.jpg
+slug: geontae-kim                 # 사진: static/media/members/geontae-kim.jpg
 is_owner: false
 category: Interns
 order: 2

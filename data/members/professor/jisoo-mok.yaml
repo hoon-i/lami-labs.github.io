@@ -1,5 +1,5 @@
 schema: hugoblox/author/v1
-slug: jisoo-mok                 # 사진: static/media/members/professor/jisoo-mok.jpg
+slug: jisoo-mok                 # 사진: static/media/members/jisoo-mok.jpg
 is_owner: true
 category: PI
 order: 1
