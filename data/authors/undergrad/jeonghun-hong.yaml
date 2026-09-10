@@ -1,0 +1,18 @@
+schema: hugoblox/author/v1
+slug: jeonghun-hong                 # 사진: static/media/authors/undergrad/jeonghun-hong.jpg
+is_owner: false
+category: Interns
+order: 7
+name:
+  display: Jeonghun Hong
+  given: Jeonghun
+  family: Hong
+role: |-                      # 여러 줄 가능. 둘째 줄에 출신 학교
+  M.S. Intern
+  Kyungpook National University
+tags:
+  - Multimodal Modeling
+links:
+  - icon: at-symbol
+    url: mailto:invhun@gmail.com
+    label: E-mail
