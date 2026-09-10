@@ -17,7 +17,7 @@
         <div class="flex flex-col items-center text-center">
           {{ $image := partial "authors/author-image" . | strings.TrimSpace }}
           {{ $hoverImage := partial "authors/author-hover-image" . | strings.TrimSpace }}
-          <img src="{{ $image }}" alt="{{ .name.display }}" class="w-32 h-40 rounded-md object-cover mb-4" loading="lazy" decoding="async" fetchpriority="low" {{ if ne $hoverImage "" }}data-hover-src="{{ $hoverImage }}"{{ end }} onerror="this.src='{{ "media/authors/me.jpg" | relURL }}'">
+          <img src="{{ $image }}" alt="{{ .name.display }}" class="w-32 h-40 rounded-md object-cover mb-4" loading="lazy" decoding="async" fetchpriority="low" {{ if ne $hoverImage "" }}data-hover-src="{{ $hoverImage }}"{{ end }} onerror="this.src='{{ "media/members/me.jpg" | relURL }}'">
           <h3 class="text-lg font-semibold mb-1">{{ .name.display }}</h3>
           <p class="text-sm text-gray-600 dark:text-gray-400 -mb-1">{{ .role }}</p>
           <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">{{ .bio }}</p>

@@ -21,8 +21,8 @@
   {{- else if hasPrefix $a.image "/" -}}
     {{- strings.TrimPrefix "/" $a.image | relURL -}}
   {{- else -}}
-    {{- printf "media/authors/%s/%s" $folder $a.image | relURL -}}
+    {{- printf "media/members/%s/%s" $folder $a.image | relURL -}}
   {{- end -}}
 {{- else -}}
-  {{- printf "media/authors/%s/%s.jpg" $folder $a.slug | relURL -}}
+  {{- printf "media/members/%s/%s.jpg" $folder $a.slug | relURL -}}
 {{- end -}}

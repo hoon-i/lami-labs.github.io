@@ -49,7 +49,7 @@ sections:
 
         <div class="pi-hero">
           <div class="pi-photo">
-            <img src="/media/authors/professor/jisoo-mok.jpg" alt="Jisoo Mok" onerror="this.style.display='none'">
+            <img src="/media/members/professor/jisoo-mok.jpg" alt="Jisoo Mok" onerror="this.style.display='none'">
           </div>
           <div class="pi-intro">
             <h2 class="pi-name">Jisoo Mok</h2>

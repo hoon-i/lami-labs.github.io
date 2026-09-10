@@ -98,7 +98,7 @@
           {{ $image := partial "authors/author-image" . | strings.TrimSpace }}
           {{ $hoverImage := partial "authors/author-hover-image" . | strings.TrimSpace }}
           <div class="people-photo-frame">
-            <img src="{{ $image }}" alt="{{ .name.display }}" class="w-full h-full object-cover" loading="lazy" decoding="async" fetchpriority="low" {{ if ne $hoverImage "" }}data-hover-src="{{ $hoverImage }}"{{ end }} onerror="this.src='{{ "media/authors/me.jpg" | relURL }}'">
+            <img src="{{ $image }}" alt="{{ .name.display }}" class="w-full h-full object-cover" loading="lazy" decoding="async" fetchpriority="low" {{ if ne $hoverImage "" }}data-hover-src="{{ $hoverImage }}"{{ end }} onerror="this.src='{{ "media/members/me.jpg" | relURL }}'">
           </div>
           <h3 class="text-lg font-semibold mb-1">{{ .name.display }}</h3>
           {{ $roleHTML := .role | default "" }}

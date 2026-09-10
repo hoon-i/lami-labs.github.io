@@ -193,9 +193,9 @@ lami-labs.github.io/
 | 페이지 | URL | content 파일 | 데이터 소스 | 이미지 위치 |
 |---|---|---|---|---|
 | Home | `/` | `content/_index.md` | `data/news/news.yaml` | `assets/media/home.png` (배경) |
-| Members > Professor | `/members/professor/` | `content/members/professor/_index.md` | 페이지 파일 안 HTML | `static/media/authors/<카테고리>/` |
+| Members > Professor | `/members/professor/` | `content/members/professor/_index.md` | 페이지 파일 안 HTML | `static/media/members/<카테고리>/` |
 | Members > Students | `/members/students/` | `content/members/students/_index.md` | `data/authors/**/*.yaml` (PhD, Integrated, Master, Interns) |
-| Members > Alumni | `/members/alumni/` | `content/members/alumni/_index.md` | `data/authors/Alumni/*.yaml` | 없음 | `static/media/authors/<카테고리>/` |
+| Members > Alumni | `/members/alumni/` | `content/members/alumni/_index.md` | `data/authors/Alumni/*.yaml` | 없음 | `static/media/members/<카테고리>/` |
 | Members (전체) | `/members/` | `content/members/_index.md` | 위 전체 | 메뉴에 노출되지 않음 |
 | News | `/news/` | `content/news/_index.md` | `data/news/news.yaml` | `static/media/news/` |
 | Publications | `/publications/` | `content/publications/_index.md` | `data/publications/publications.yaml` | 없음 (아이콘만) |
@@ -217,7 +217,7 @@ lami-labs.github.io/
 ### Members > Professor (`content/members/professor/_index.md`)
 
 - 이 페이지는 멤버 카드 shortcode를 쓰지 않고 `id: pi` 블록의 HTML로 직접 구성되어 있습니다. 왼쪽 사진, 오른쪽 소개글, 아래에 Education / Professional Experience / Academic Service / Invited Talks 4개 섹션입니다.
-- 사진은 `static/media/authors/professor/jisoo-mok.jpg`를 읽습니다. 소개글, CV 링크, 경력이 바뀌면 이 파일의 HTML을 수정하세요.
+- 사진은 `static/media/members/professor/jisoo-mok.jpg`를 읽습니다. 소개글, CV 링크, 경력이 바뀌면 이 파일의 HTML을 수정하세요.
 - 교수 YAML(`data/authors/professor/jisoo-mok.yaml`)은 전체 Members 페이지(`/members/`)에서만 쓰입니다.
 
 ### Contact (`content/contact/_index.md`)
@@ -244,7 +244,7 @@ lami-labs.github.io/
 
 `category`에 들어갈 수 있는 값 (shortcode 필터 기준, 대소문자 정확히):
 
-| category 값 | 표시 페이지 / 섹션 | 사진 폴더 (`static/media/authors/`) |
+| category 값 | 표시 페이지 / 섹션 | 사진 폴더 (`static/media/members/`) |
 |---|---|---|
 | `PI` | Professor 페이지 / Professor | `professor/` |
 | `Postdoc` | (현재 어느 페이지에도 표시 안 함) | `postdoc/` |
@@ -274,7 +274,7 @@ role: |-                    # 여러 줄 가능. 첫 줄 과정, 둘째 줄 출�
   HUFS
 tags:                       # 연구 분야 배지
   - LLM Fundamentals
-hidden_image: jaehoon-jang-2.jpg   # (선택) hover 시 보일 사진, static/media/authors/hidden/ 에 위치
+hidden_image: jaehoon-jang-2.jpg   # (선택) hover 시 보일 사진, static/media/members/hidden/ 에 위치
 links:                      # 아이콘 링크 줄. 없으면 표시되지 않음. at-symbol은 아이콘 옆에 주소가 함께 표시됨
   - icon: at-symbol
     url: mailto:name@example.edu
@@ -314,8 +314,8 @@ graduated: "2025 Fall"      # 졸업 시기
 **사진 규칙** (`layouts/partials/authors/author-image.html` 로직):
 
 1. `image:` 필드가 있으면 그 값을 사용 (URL, `/`로 시작하는 절대경로, 또는 카테고리 폴더 내 파일명)
-2. 없으면 `static/media/authors/<카테고리폴더>/<slug>.jpg`를 자동으로 찾음
-3. 그것도 없으면 `static/media/authors/me.jpg`로 대체 (기본 이미지, 필요 시 추가)
+2. 없으면 `static/media/members/<카테고리폴더>/<slug>.jpg`를 자동으로 찾음
+3. 그것도 없으면 `static/media/members/me.jpg`로 대체 (기본 이미지, 필요 시 추가)
 
 ### 6.2 연구 주제 — `data/research/<slug>.yaml`
 
@@ -475,9 +475,9 @@ tracks:
 | 헤더 로고 | `assets/media/logo.png` | `params.yaml`의 `identity.logo`, `header.logo`에서 참조 |
 | 홈 히어로 배경 | `assets/media/home.png` | `content/_index.md`의 `background.image.filename` |
 | 파비콘 | `static/favicon.png` | JS로 강제 교체하므로 이 파일만 바꾸면 됨 |
-| 멤버 사진 | `static/media/authors/{professor,postdoc,phd,integrated,master,undergrad}/<slug>.jpg` | 3:4 비율 권장 |
-| 멤버 hover 사진 | `static/media/authors/hidden/<파일명>` | YAML의 `hidden_image` |
-| 멤버 기본 사진 | `static/media/authors/me.jpg` | 사진 없을 때 대체 이미지 (현재 없음, 추가 권장) |
+| 멤버 사진 | `static/media/members/{professor,postdoc,phd,integrated,master,undergrad}/<slug>.jpg` | 3:4 비율 권장 |
+| 멤버 hover 사진 | `static/media/members/hidden/<파일명>` | YAML의 `hidden_image` |
+| 멤버 기본 사진 | `static/media/members/me.jpg` | 사진 없을 때 대체 이미지 (현재 없음, 추가 권장) |
 | 연구 주제 이미지 | `static/media/research/` | jpg/png/gif |
 | 뉴스 이미지 | `static/media/news/` | |
 | 갤러리 사진 | `static/media/gallery/<folder>/` | 폴더 통째로 자동 인식 |
@@ -536,7 +536,7 @@ tracks:
 
 **새 멤버 추가**
 1. `data/authors/<카테고리폴더>/<slug>.yaml` 생성 (6.1 참고)
-2. 사진을 `static/media/authors/<카테고리폴더>/<slug>.jpg`로 저장
+2. 사진을 `static/media/members/<카테고리폴더>/<slug>.jpg`로 저장
 3. `order` 값으로 순서 조정
 
 **멤버 졸업 처리**
@@ -572,7 +572,7 @@ tracks:
 <details>
 <summary><h2>10. 주의사항 및 알려진 이슈</h2></summary>
 
-- **멤버 사진이 아직 없습니다.** `static/media/authors/<카테고리>/<slug>.jpg`에 사진을 넣으면 카드에 표시됩니다. 사진 없는 멤버의 대체 이미지 `static/media/authors/me.jpg`도 없으니 하나 넣어두는 것을 권장합니다.
+- **멤버 사진이 아직 없습니다.** `static/media/members/<카테고리>/<slug>.jpg`에 사진을 넣으면 카드에 표시됩니다. 사진 없는 멤버의 대체 이미지 `static/media/members/me.jpg`도 없으니 하나 넣어두는 것을 권장합니다.
 - **로고, 파비콘, 홈 배경이 템플릿 기본 이미지입니다.** `assets/media/logo.png`(파란 네모), `static/favicon.png`, `assets/media/home.png`(남색 단색)을 연구실 이미지로 교체해야 합니다.
 - **교수 YAML의 Google Scholar 링크와 논문별 원문/코드 링크가 비어 있습니다.**
 - **멤버 `category` 값은 shortcode 필터와 정확히 일치해야 합니다.** 6.1의 표를 따르세요.

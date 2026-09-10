@@ -12,9 +12,9 @@
       {{- $scratch.Set "url" ((strings.TrimPrefix "/" $hiddenRaw) | relURL) -}}
     {{- end -}}
   {{- else -}}
-    {{- $localPath := printf "static/media/authors/hidden/%s" $hiddenRaw -}}
+    {{- $localPath := printf "static/media/members/hidden/%s" $hiddenRaw -}}
     {{- if fileExists $localPath -}}
-      {{- $scratch.Set "url" (printf "media/authors/hidden/%s" $hiddenRaw | relURL) -}}
+      {{- $scratch.Set "url" (printf "media/members/hidden/%s" $hiddenRaw | relURL) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
@@ -57,9 +57,9 @@
 
   {{- range $candidates -}}
     {{- if eq ($scratch.Get "url") "" -}}
-      {{- $localPath := printf "static/media/authors/hidden/%s" . -}}
+      {{- $localPath := printf "static/media/members/hidden/%s" . -}}
       {{- if fileExists $localPath -}}
-        {{- $scratch.Set "url" (printf "media/authors/hidden/%s" . | relURL) -}}
+        {{- $scratch.Set "url" (printf "media/members/hidden/%s" . | relURL) -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
