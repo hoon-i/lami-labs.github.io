@@ -2,7 +2,7 @@ schema: hugoblox/author/v1
 slug: jeonghun-hong                 # 사진: static/media/authors/undergrad/jeonghun-hong.jpg
 is_owner: false
 category: Interns
-order: 7
+order: 0
 name:
   display: Jeonghun Hong
   given: Jeonghun
